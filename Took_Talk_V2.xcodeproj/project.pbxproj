@@ -409,7 +409,7 @@
 		85B19B182BAC8BE3007D9113 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				85C05C6B2BB0F8270062E2FE /* Extention */,
+				85C05C6B2BB0F8270062E2FE /* Extension */,
 				85B19B042BAC8BE3007D9113 /* View */,
 				85B19AD62BAC8BE3007D9113 /* Model */,
 				85B19B172BAC8BE3007D9113 /* ViewModel */,
@@ -438,12 +438,12 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		85C05C6B2BB0F8270062E2FE /* Extention */ = {
+		85C05C6B2BB0F8270062E2FE /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				85B19BBF2BAC8CFB007D9113 /* Fonts.swift */,
 			);
-			path = Extention;
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
