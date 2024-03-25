@@ -14,14 +14,14 @@ struct SignupNicNameView: View {
         VStack {
             CustomSignTextField(text: "닉네임", placeholder: "닉네임을 입력해주세요", textfieldValue: viewModel.nicname)
                 .padding(.bottom, 30)
-
+            
             CustomSignTextField(text: "나이", placeholder: "나이를 입력해주세요", textfieldValue: viewModel.age)
                 .padding(.bottom, 30)
-
+            
             HStack {
                 Text("성별")
                     .font(.pretendard())
-
+                
                 Spacer()
             }
             .padding(.bottom, 0)
@@ -42,13 +42,14 @@ struct SignupNicNameView: View {
                 Button(action: {
                     viewModel.isGirlSelected.toggle()
                     viewModel.isBoySelected = false
-                }) {
+                }
+                ) {
                     Text("Girl")
                         .foregroundColor(.black)
                         .font(.pretendard())
                 }
                 .frame(width: 140, height: 45)
-                .background(viewModel.isGirlSelected ? Color(UIColor.systemGray2) : Color(UIColor.systemGray5))             
+                .background(viewModel.isGirlSelected ? Color(UIColor.systemGray2) : Color(UIColor.systemGray5))
                 .cornerRadius(10)
                 
             }

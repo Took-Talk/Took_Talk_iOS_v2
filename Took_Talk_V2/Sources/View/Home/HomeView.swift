@@ -37,7 +37,7 @@ struct HomeView: View {
                     .foregroundStyle(.gray)
                     .frame(width: 200, height: 50, alignment: .center)
                     .font(.pretendard(size: 20))
-
+                
                 AgePickerView(values: Array(14...19), selected: $setAge)
                     .foregroundStyle(.black)
                     .frame(width: 76, height: 50, alignment: .center)
@@ -47,7 +47,6 @@ struct HomeView: View {
                     )
                     .padding(.vertical, 5)
                     .padding(.horizontal, 10)
-                
                 
                 //                MbtiPickerView(selected: $viewModel.mbti)
                 //                    .frame()
@@ -70,7 +69,7 @@ struct HomeView: View {
                 
                     .padding(.bottom, 30)
                 Button {
-                    viewModel.routeToWaitingView()
+//                    viewModel.routeToWaitingView()
                 } label: {
                     Text("START")
                         .font(.pretendard(size: 20, weight: .bold))

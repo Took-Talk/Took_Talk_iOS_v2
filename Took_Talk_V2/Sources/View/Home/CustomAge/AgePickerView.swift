@@ -25,7 +25,6 @@ struct AgePickerView: UIViewRepresentable {
         self.textField.adjustsFontSizeToFitWidth = true
         self.textField.isEnabled = true
         
-        
         let toolbar = UIToolbar()
         let doneBtn = UIBarButtonItem(title: "완료", image: nil, primaryAction: context.coordinator.doneAction)
         let flexibleSpaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)

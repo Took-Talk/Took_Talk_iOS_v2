@@ -35,6 +35,3 @@ struct CustomSignTextField: View/*, TextFieldRepresentable*/ {
 
     }
 }
-
-
-

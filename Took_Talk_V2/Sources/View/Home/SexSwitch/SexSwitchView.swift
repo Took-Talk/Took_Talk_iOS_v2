@@ -34,7 +34,7 @@ struct SexSwitchView: View {
                                     Image(systemName: mode.imageName)
                                         .font(.title)
                                         .foregroundStyle(Color.pink)
-                                default :
+                                default:
                                     Image(systemName: mode.imageName)
                                         .font(.title2)
                                 }
@@ -67,9 +67,6 @@ struct SexSwitchView: View {
                             .fill(color.opacity(0.1))
                             .frame(width: backgroundWidth - 1)
                             .offset(x: xOffset)
-                    
-                    
-                    
                 }
             }
             .padding(.horizontal, 25)

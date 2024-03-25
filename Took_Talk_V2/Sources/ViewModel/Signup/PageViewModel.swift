@@ -19,10 +19,8 @@ class PageViewModel: ObservableObject {
 
     func next() {
         progress += 1
-
-        
-        
     }
+    
     func back() {
         progress -= 1
     }

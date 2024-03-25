@@ -15,7 +15,6 @@ class SignupPhoneNumberViewModel: ObservableObject {
     @Published var timer = Timer.publish(every: 1, on: .current, in: .common).autoconnect()
     @Published var percentage: CGFloat = 1.0
     
-    
     func number() {
         print("asdf")
     }

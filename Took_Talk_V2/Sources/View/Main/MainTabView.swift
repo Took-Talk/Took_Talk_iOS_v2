@@ -27,11 +27,9 @@ struct MainTabView: View {
                   }
                 .badge(10)
 
-            
         }  
         .navigationBarBackButtonHidden()
         .font(.headline)
 
     }
 }
-

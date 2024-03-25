@@ -12,9 +12,8 @@ class HomeViewModel: ObservableObject {
     @Published var setAge: Int = 15
     @Published var isWaitingViewActive: Bool = false
     @Published var isCustomBackButtonHidden = true
-    
 
-    func routeToWaitingView() {
-        //WaitingView로 이동
-    }
+//    func routeToWaitingView() {
+//        //WaitingView로 이동
+//    }
 }
