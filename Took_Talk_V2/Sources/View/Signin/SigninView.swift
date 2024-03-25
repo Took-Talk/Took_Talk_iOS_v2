@@ -24,7 +24,7 @@ struct SigninView: View {
                 Text("또래와의 소통이 더욱 쉬워지는\nTook Talk으로 지금 시작해보세요!")
                     .foregroundColor(.gray)
                     .multilineTextAlignment(.center)
-                    .font(.custom(pretendardRegular, size: 12))
+                    .font(.pretendard(size: 12))
                     .frame(width: 250, height: 30, alignment: .top)
                 
                 VStack {
@@ -40,7 +40,7 @@ struct SigninView: View {
                             
                         } label: {
                             Text("비밀번호 찾기")
-                                .font(.custom(pretendardThin, size: 13))
+                                .font(.pretendard(size: 13, weight: .thin))
                                 .foregroundColor(Color.black)
                                 .fontWeight(.semibold)
                         }
@@ -54,7 +54,7 @@ struct SigninView: View {
                                 viewModel.signup()
                             } label: {
                                 Text("회원가입")
-                                    .font(.custom(pretendardThin, size: 13))
+                                    .font(.pretendard(size: 13, weight: .thin))
                                     .foregroundColor(Color.black)
                                     .fontWeight(.semibold)
                             }
@@ -68,7 +68,7 @@ struct SigninView: View {
                         viewModel.signup()
                     } label: {
                         Text("회원가입")
-                            .font(.custom(pretendardThin, size: 13))
+                            .font(.pretendard(size: 13, weight: .thin))
                             .foregroundColor(Color.black)
                             .fontWeight(.semibold)
                     }
@@ -82,11 +82,10 @@ struct SigninView: View {
                     .padding(.bottom, 70)
                 
                 
-                Group {
+                NavigationStack {
                     NavigationLink(
                         destination: MainTabView(),
                         isActive: $viewModel.isWaitingViewActive
-                        
                     ) {
                         EmptyView()
                     }
@@ -95,10 +94,9 @@ struct SigninView: View {
                         viewModel.login()
                     }) {
                         Text("로그인")
-                            .font(.custom(pretendardRegular, size: 20))
+                            .font(.pretendard(size: 20, weight: .regular))
                             .frame(width: 320, height: 50)
                     }
-                    
                 }
                 .background(Color("myOrange"))
                 .foregroundColor(Color.white)

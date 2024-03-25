@@ -20,8 +20,8 @@ struct SignupMbtiView: View {
         VStack {
             HStack {
                 Text("MBTI")
-                    .font(.custom(pretendardRegular, size: 15))
-                
+                    .font(.pretendard())
+
                 Spacer()
             }
             

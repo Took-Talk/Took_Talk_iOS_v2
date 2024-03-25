@@ -24,7 +24,7 @@ struct MbtiPickerView: UIViewRepresentable {
         self.textField.inputView = self.picker
         
         self.textField.textColor = .black
-        self.textField.font = UIFont(name: pretendardSemiBold, size: 32)
+        self.textField.font = Font.pretendard(size: 32, weight: .semibold)
         
         self.textField.textAlignment = .center
         self.textField.adjustsFontSizeToFitWidth = true

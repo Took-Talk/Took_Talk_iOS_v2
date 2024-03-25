@@ -20,8 +20,8 @@ struct SignupNicNameView: View {
 
             HStack {
                 Text("성별")
-                    .font(.custom(pretendardRegular, size: 15))
-                
+                    .font(.pretendard())
+
                 Spacer()
             }
             .padding(.bottom, 0)
@@ -33,7 +33,7 @@ struct SignupNicNameView: View {
                 }) {
                     Text("Boy")
                         .foregroundColor(.black)
-                        .font(.custom(pretendardRegular, size: 15))
+                        .font(.pretendard())
                 }
                 .frame(width: 140, height: 45)
                 .background(viewModel.isBoySelected ? Color(UIColor.systemGray2) : Color(.systemGray5))
@@ -45,7 +45,7 @@ struct SignupNicNameView: View {
                 }) {
                     Text("Girl")
                         .foregroundColor(.black)
-                        .font(.custom(pretendardRegular, size: 15))
+                        .font(.pretendard())
                 }
                 .frame(width: 140, height: 45)
                 .background(viewModel.isGirlSelected ? Color(UIColor.systemGray2) : Color(UIColor.systemGray5))             

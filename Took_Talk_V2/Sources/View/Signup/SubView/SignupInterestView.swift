@@ -15,7 +15,7 @@ struct SignupInterestView: View {
         VStack {
             HStack {
                 Text("관심사")
-                    .font(.custom(pretendardRegular, size: 15))
+                    .font(.pretendard())
                 Spacer()
             }
             .padding(.top, 0)
@@ -34,7 +34,7 @@ struct SignupInterestView: View {
                             print(viewModel.selectedInterest)
                         }) {
                             Text("\(idx)")
-                                .font(.custom(pretendardLight, size: 15))
+                                .font(.pretendard(weight: .light))
                                 .foregroundStyle(.black)
                                 .padding(.horizontal, 3)
                         }
