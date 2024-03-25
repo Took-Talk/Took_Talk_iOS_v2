@@ -15,7 +15,7 @@ struct SignupInterestView: View {
         VStack {
             HStack {
                 Text("관심사")
-                    .font(.custom(pretendardRegular, size: 15))
+                    .font(.pretendard())
                 Spacer()
             }
             .padding(.top, 0)
@@ -34,16 +34,29 @@ struct SignupInterestView: View {
                             print(viewModel.selectedInterest)
                         }) {
                             Text("\(idx)")
-                                .font(.custom(pretendardLight, size: 15))
+                                .font(.pretendard(weight: .light))
                                 .foregroundStyle(.black)
                                 .padding(.horizontal, 3)
                         }
                         .frame(height: 40)
                         .padding(.horizontal, 3)
-                        .foregroundColor(viewModel.selectedInterest.contains(idx) ? Color("myOrange") : viewModel.selectedInterest.contains(idx) ? Color(.systemGray2) : Color(.systemGray4))
+                        .foregroundColor(
+                            viewModel.selectedInterest.contains(idx)
+                            ? Color("myOrange")
+                            : viewModel.selectedInterest.contains(idx)
+                            ? Color(.systemGray2)
+                            : Color(.systemGray4)
+                        )
                         .overlay(
                             RoundedRectangle(cornerRadius: 20)
-                                .stroke(viewModel.selectedInterest.contains(idx) ? Color("myOrange") : viewModel.relatedInterest.contains(idx) ? Color(.systemGray2) : Color(.systemGray3), lineWidth: 1)
+                                .stroke(
+                                    viewModel.selectedInterest.contains(idx)
+                                    ? Color("myOrange")
+                                    : viewModel.relatedInterest.contains(idx)
+                                    ? Color(.systemGray2)
+                                    : Color(.systemGray3),
+                                    lineWidth: 1
+                                )
                         )
                         .padding(.vertical, 3)
                         .padding(.horizontal, 1)

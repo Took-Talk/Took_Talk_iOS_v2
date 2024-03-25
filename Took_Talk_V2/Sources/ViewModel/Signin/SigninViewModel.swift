@@ -8,16 +8,15 @@
 import Foundation
 
 class SigninViewModel: ObservableObject {
-    
     @Published var id: String = ""
     @Published var password: String = ""
     @Published var isPresented: Bool = false
     @Published var isSuccess: Bool = false
     @Published var isWaitingViewActive: Bool = false
+    @Published var mainTabPath: Bool = false
     
     func signup() {
-        
-        //회원가입으로 가는 코드
+        isWaitingViewActive = true
     }
     func login() {
         //        FirebaseAuth.Auth.auth().signIn(withEmail: id, password: password) { [weak self] user, error in

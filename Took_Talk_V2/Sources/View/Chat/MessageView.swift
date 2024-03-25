@@ -7,13 +7,10 @@
 
 import SwiftUI
 
-
 struct MessageView: View {
 //    var message: Message
     var body: some View {
             HStack {
-               
-                
 //                HStack {
 ////                    Text(message.text)
 //                        .padding()

@@ -17,8 +17,8 @@ struct CustomSignTextField: View/*, TextFieldRepresentable*/ {
             if text != nil {
                 HStack {
                     Text(text ?? "")
-                        .font(.custom(pretendardRegular, size: 15))
-                    
+                        .font(.pretendard())
+
                     Spacer()
                 }
                 .padding(.bottom, 0)
@@ -35,6 +35,3 @@ struct CustomSignTextField: View/*, TextFieldRepresentable*/ {
 
     }
 }
-
-
-

@@ -12,6 +12,7 @@ struct AgePickerView: UIViewRepresentable {
     let picker = UIPickerView()
     
     let values: [Int]
+    
     @Binding var selected: Int
     
     func makeUIView(context: Context) -> UITextField {
@@ -19,11 +20,10 @@ struct AgePickerView: UIViewRepresentable {
         self.textField.inputView = self.picker
         
         self.textField.textColor = .black
-        self.textField.font = UIFont(name: pretendardSemiBold, size: 32)
+        self.textField.font = Font.pretendard(size: 30)
         self.textField.textAlignment = .center
         self.textField.adjustsFontSizeToFitWidth = true
         self.textField.isEnabled = true
-        
         
         let toolbar = UIToolbar()
         let doneBtn = UIBarButtonItem(title: "완료", image: nil, primaryAction: context.coordinator.doneAction)

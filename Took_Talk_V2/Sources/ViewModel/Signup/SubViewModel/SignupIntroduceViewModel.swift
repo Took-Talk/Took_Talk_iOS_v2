@@ -8,6 +8,6 @@
 import SwiftUI
 
 class SignupIntroduceViewModel: ObservableObject {
-    @Published var introduce: String = "예) 저는 182, 75 입니다."
+    @Published var introduce: String = ""
     
 }

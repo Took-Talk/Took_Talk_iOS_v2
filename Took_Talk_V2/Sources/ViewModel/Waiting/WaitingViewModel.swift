@@ -15,6 +15,6 @@ class WaitingViewModel: ObservableObject {
     //    @Published var isCustomBackButtonHidden = true
     
     func routeToWaitingView() {
-        //WaitingView로 이동
+        // WaitingView로 이동
     }
 }

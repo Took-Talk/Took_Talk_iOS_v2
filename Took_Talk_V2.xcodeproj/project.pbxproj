@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -63,11 +63,10 @@
 		85B19BCB2BAC8CFB007D9113 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 85B19BC32BAC8CFB007D9113 /* Pretendard-Regular.otf */; };
 		85B19BCC2BAC8CFB007D9113 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 85B19BC42BAC8CFB007D9113 /* Pretendard-SemiBold.otf */; };
 		85B19BCD2BAC8CFB007D9113 /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 85B19BC52BAC8CFB007D9113 /* Pretendard-Thin.otf */; };
+		85C05C7F2BB168F40062E2FE /* .swiftlint.yml in Sources */ = {isa = PBXBuildFile; fileRef = 85C05C702BB116700062E2FE /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		852C0BE02BAF32DD00A7112D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		85B1995B2BAC7F9F007D9113 /* Took_Talk_V2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Took_Talk_V2.app; path = "/Users/choesihun/Desktop/Took_Talk_V2/build/Debug-iphoneos/Took_Talk_V2.app"; sourceTree = "<absolute>"; };
 		85B199E22BAC807F007D9113 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		85B199E52BAC8080007D9113 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		85B199E62BAC8083007D9113 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -121,6 +120,8 @@
 		85B19BC32BAC8CFB007D9113 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		85B19BC42BAC8CFB007D9113 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		85B19BC52BAC8CFB007D9113 /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.otf"; sourceTree = "<group>"; };
+		85C05C702BB116700062E2FE /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		85C05C782BB119000062E2FE /* Took_Talk_V2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Took_Talk_V2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,7 +141,10 @@
 		85B199522BAC7F9F007D9113 = {
 			isa = PBXGroup;
 			children = (
+				85C05C702BB116700062E2FE /* .swiftlint.yml */,
 				85B1995D2BAC7F9F007D9113 /* Took_Talk_V2 */,
+				85C05C782BB119000062E2FE /* Took_Talk_V2.app */,
+				85C05C812BB16B790062E2FE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -156,7 +160,6 @@
 		85B19AD12BAC89D6007D9113 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				852C0BE02BAF32DD00A7112D /* Info.plist */,
 				85B199EB2BAC809C007D9113 /* Took_Talk_V2App.swift */,
 				85B199E62BAC8083007D9113 /* Assets.xcassets */,
 				85B199E52BAC8080007D9113 /* ContentView.swift */,
@@ -366,7 +369,6 @@
 		85B19B132BAC8BE3007D9113 /* SubViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				85B19B0C2BAC8BE3007D9113 /* PageViewModel.swift */,
 				85B19B0D2BAC8BE3007D9113 /* SignupInterestViewModel.swift */,
 				85B19B0E2BAC8BE3007D9113 /* SignupIntroduceViewModel.swift */,
 				85B19B0F2BAC8BE3007D9113 /* SignupMbtiViewModel.swift */,
@@ -380,6 +382,7 @@
 		85B19B142BAC8BE3007D9113 /* Signup */ = {
 			isa = PBXGroup;
 			children = (
+				85B19B0C2BAC8BE3007D9113 /* PageViewModel.swift */,
 				85B19B132BAC8BE3007D9113 /* SubViewModel */,
 			);
 			path = Signup;
@@ -408,6 +411,7 @@
 		85B19B182BAC8BE3007D9113 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				85C05C6B2BB0F8270062E2FE /* Extension */,
 				85B19B042BAC8BE3007D9113 /* View */,
 				85B19AD62BAC8BE3007D9113 /* Model */,
 				85B19B172BAC8BE3007D9113 /* ViewModel */,
@@ -418,7 +422,6 @@
 		85B19BC62BAC8CFB007D9113 /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				85B19BBF2BAC8CFB007D9113 /* Fonts.swift */,
 				85B19BC02BAC8CFB007D9113 /* Pretendard-Bold.otf */,
 				85B19BC12BAC8CFB007D9113 /* Pretendard-Light.otf */,
 				85B19BC22BAC8CFB007D9113 /* Pretendard-Medium.otf */,
@@ -437,6 +440,21 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		85C05C6B2BB0F8270062E2FE /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				85B19BBF2BAC8CFB007D9113 /* Fonts.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		85C05C812BB16B790062E2FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -444,6 +462,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 85B199692BAC7FA0007D9113 /* Build configuration list for PBXNativeTarget "Took_Talk_V2" */;
 			buildPhases = (
+				85C05C6F2BB116190062E2FE /* SwiftLint Script */,
 				85B199572BAC7F9F007D9113 /* Sources */,
 				85B199582BAC7F9F007D9113 /* Frameworks */,
 				85B199592BAC7F9F007D9113 /* Resources */,
@@ -459,7 +478,7 @@
 				852C0BE92BAF3BB500A7112D /* WrappingHStack */,
 			);
 			productName = Took_Talk_V2;
-			productReference = 85B1995B2BAC7F9F007D9113 /* Took_Talk_V2.app */;
+			productReference = 85C05C782BB119000062E2FE /* Took_Talk_V2.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -478,7 +497,7 @@
 				};
 			};
 			buildConfigurationList = 85B199562BAC7F9F007D9113 /* Build configuration list for PBXProject "Took_Talk_V2" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -518,11 +537,34 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		85C05C6F2BB116190062E2FE /* SwiftLint Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "SwiftLint Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		85B199572BAC7F9F007D9113 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85C05C7F2BB168F40062E2FE /* .swiftlint.yml in Sources */,
 				85B19B9B2BAC8BE3007D9113 /* MainTabView.swift in Sources */,
 				85B19BA12BAC8BE3007D9113 /* SignupMbtiView.swift in Sources */,
 				85B19B962BAC8BE3007D9113 /* AgePickerView.swift in Sources */,
@@ -626,7 +668,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -683,7 +725,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -703,13 +745,16 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Took_Talk_V2/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = W7X5HRD463;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = /Users/choesihun/Desktop/Took_Talk_V2/Took_Talk_V2/Resources/Info.plist;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -733,13 +778,16 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Took_Talk_V2/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = W7X5HRD463;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = /Users/choesihun/Desktop/Took_Talk_V2/Took_Talk_V2/Resources/Info.plist;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

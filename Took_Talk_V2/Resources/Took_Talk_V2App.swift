@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct Took_Talk_V2App: App {
+struct TookTalkV2App: App {
     var body: some Scene {
         WindowGroup {
             SignupView()

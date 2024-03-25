@@ -21,7 +21,10 @@ struct CustomSelectInterestButton: ButtonStyle {
                             .fill(.white)
                     )
             )
-            .foregroundColor(viewModel.selectedInterest.contains(idx) ? .accentColor : viewModel.selectedInterest.contains(idx) ? Color(.systemGray2) : Color(.systemGray4))
+            .foregroundColor(viewModel.selectedInterest.contains(idx) 
+                             ? .accentColor : viewModel.selectedInterest.contains(idx)
+                             ? Color(.systemGray2)
+                             : Color(.systemGray4))
 
             .background(
                 
@@ -31,4 +34,3 @@ struct CustomSelectInterestButton: ButtonStyle {
         
     }
 }
-
