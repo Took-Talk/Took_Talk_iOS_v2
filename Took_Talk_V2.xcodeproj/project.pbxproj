@@ -63,11 +63,10 @@
 		85B19BCB2BAC8CFB007D9113 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 85B19BC32BAC8CFB007D9113 /* Pretendard-Regular.otf */; };
 		85B19BCC2BAC8CFB007D9113 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 85B19BC42BAC8CFB007D9113 /* Pretendard-SemiBold.otf */; };
 		85B19BCD2BAC8CFB007D9113 /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 85B19BC52BAC8CFB007D9113 /* Pretendard-Thin.otf */; };
+		85C05C6E2BB113360062E2FE /* SwiftLintFramework in Frameworks */ = {isa = PBXBuildFile; productRef = 85C05C6D2BB113360062E2FE /* SwiftLintFramework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		852C0BE02BAF32DD00A7112D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		85B1995B2BAC7F9F007D9113 /* Took_Talk_V2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Took_Talk_V2.app; path = "/Users/choesihun/Desktop/Took_Talk_V2/build/Debug-iphoneos/Took_Talk_V2.app"; sourceTree = "<absolute>"; };
 		85B199E22BAC807F007D9113 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		85B199E52BAC8080007D9113 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		85B199E62BAC8083007D9113 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -121,6 +120,7 @@
 		85B19BC32BAC8CFB007D9113 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		85B19BC42BAC8CFB007D9113 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		85B19BC52BAC8CFB007D9113 /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.otf"; sourceTree = "<group>"; };
+		85C05C6A2BB074590062E2FE /* Took_Talk_V2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Took_Talk_V2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85C05C6E2BB113360062E2FE /* SwiftLintFramework in Frameworks */,
 				852C0BE72BAF3BAA00A7112D /* OpenTDS in Frameworks */,
 				852C0BEA2BAF3BB500A7112D /* WrappingHStack in Frameworks */,
 				852C0BE42BAF3B9200A7112D /* Alamofire in Frameworks */,
@@ -141,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				85B1995D2BAC7F9F007D9113 /* Took_Talk_V2 */,
+				85C05C6A2BB074590062E2FE /* Took_Talk_V2.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -156,7 +158,6 @@
 		85B19AD12BAC89D6007D9113 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				852C0BE02BAF32DD00A7112D /* Info.plist */,
 				85B199EB2BAC809C007D9113 /* Took_Talk_V2App.swift */,
 				85B199E62BAC8083007D9113 /* Assets.xcassets */,
 				85B199E52BAC8080007D9113 /* ContentView.swift */,
@@ -366,7 +367,6 @@
 		85B19B132BAC8BE3007D9113 /* SubViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				85B19B0C2BAC8BE3007D9113 /* PageViewModel.swift */,
 				85B19B0D2BAC8BE3007D9113 /* SignupInterestViewModel.swift */,
 				85B19B0E2BAC8BE3007D9113 /* SignupIntroduceViewModel.swift */,
 				85B19B0F2BAC8BE3007D9113 /* SignupMbtiViewModel.swift */,
@@ -380,6 +380,7 @@
 		85B19B142BAC8BE3007D9113 /* Signup */ = {
 			isa = PBXGroup;
 			children = (
+				85B19B0C2BAC8BE3007D9113 /* PageViewModel.swift */,
 				85B19B132BAC8BE3007D9113 /* SubViewModel */,
 			);
 			path = Signup;
@@ -408,6 +409,7 @@
 		85B19B182BAC8BE3007D9113 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				85C05C6B2BB0F8270062E2FE /* Extention */,
 				85B19B042BAC8BE3007D9113 /* View */,
 				85B19AD62BAC8BE3007D9113 /* Model */,
 				85B19B172BAC8BE3007D9113 /* ViewModel */,
@@ -418,7 +420,6 @@
 		85B19BC62BAC8CFB007D9113 /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				85B19BBF2BAC8CFB007D9113 /* Fonts.swift */,
 				85B19BC02BAC8CFB007D9113 /* Pretendard-Bold.otf */,
 				85B19BC12BAC8CFB007D9113 /* Pretendard-Light.otf */,
 				85B19BC22BAC8CFB007D9113 /* Pretendard-Medium.otf */,
@@ -435,6 +436,14 @@
 				85B199E22BAC807F007D9113 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		85C05C6B2BB0F8270062E2FE /* Extention */ = {
+			isa = PBXGroup;
+			children = (
+				85B19BBF2BAC8CFB007D9113 /* Fonts.swift */,
+			);
+			path = Extention;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -457,9 +466,10 @@
 				852C0BE32BAF3B9200A7112D /* Alamofire */,
 				852C0BE62BAF3BAA00A7112D /* OpenTDS */,
 				852C0BE92BAF3BB500A7112D /* WrappingHStack */,
+				85C05C6D2BB113360062E2FE /* SwiftLintFramework */,
 			);
 			productName = Took_Talk_V2;
-			productReference = 85B1995B2BAC7F9F007D9113 /* Took_Talk_V2.app */;
+			productReference = 85C05C6A2BB074590062E2FE /* Took_Talk_V2.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -490,6 +500,7 @@
 				85B19BB42BAC8C01007D9113 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				852C0BE52BAF3BAA00A7112D /* XCRemoteSwiftPackageReference "OpenTDS" */,
 				852C0BE82BAF3BB500A7112D /* XCRemoteSwiftPackageReference "WrappingHStack" */,
+				85C05C6C2BB113360062E2FE /* XCRemoteSwiftPackageReference "SwiftLint" */,
 			);
 			productRefGroup = 85B199522BAC7F9F007D9113;
 			projectDirPath = "";
@@ -703,8 +714,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Took_Talk_V2/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = W7X5HRD463;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = /Users/choesihun/Desktop/Took_Talk_V2/Took_Talk_V2/Resources/Info.plist;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -733,8 +744,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Took_Talk_V2/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = W7X5HRD463;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = /Users/choesihun/Desktop/Took_Talk_V2/Took_Talk_V2/Resources/Info.plist;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -801,6 +812,14 @@
 				minimumVersion = 5.9.0;
 			};
 		};
+		85C05C6C2BB113360062E2FE /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/SwiftLint.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.54.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -818,6 +837,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 852C0BE82BAF3BB500A7112D /* XCRemoteSwiftPackageReference "WrappingHStack" */;
 			productName = WrappingHStack;
+		};
+		85C05C6D2BB113360062E2FE /* SwiftLintFramework */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85C05C6C2BB113360062E2FE /* XCRemoteSwiftPackageReference "SwiftLint" */;
+			productName = SwiftLintFramework;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
