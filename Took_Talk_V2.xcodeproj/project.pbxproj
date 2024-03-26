@@ -295,13 +295,13 @@
 		85B19AFE2BAC8BE3007D9113 /* SubView */ = {
 			isa = PBXGroup;
 			children = (
-				85B19AF72BAC8BE3007D9113 /* PageView.swift */,
 				85B19AF82BAC8BE3007D9113 /* SignupInterestView.swift */,
 				85B19AF92BAC8BE3007D9113 /* SignupIntroduceView.swift */,
 				85B19AFA2BAC8BE3007D9113 /* SignupMbtiView.swift */,
 				85B19AFB2BAC8BE3007D9113 /* SignupNicNameView.swift */,
 				85B19AFC2BAC8BE3007D9113 /* SignupPasswordView.swift */,
 				85B19AFD2BAC8BE3007D9113 /* SignupPhoneNumberView.swift */,
+				85B19AF72BAC8BE3007D9113 /* PageView.swift */,
 			);
 			path = SubView;
 			sourceTree = "<group>";
