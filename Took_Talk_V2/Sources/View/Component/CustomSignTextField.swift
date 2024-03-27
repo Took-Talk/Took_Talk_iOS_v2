@@ -7,10 +7,11 @@
 
 import SwiftUI
 
-struct CustomSignTextField: View/*, TextFieldRepresentable*/ {
+struct CustomSignTextField: View {
     @State var text: String?
     @State var placeholder: String
     @State var textfieldValue: String
+    @State var width: CGFloat?
     
     var body: some View {
         VStack {
@@ -31,7 +32,7 @@ struct CustomSignTextField: View/*, TextFieldRepresentable*/ {
                 .foregroundColor(Color("myGray"))
                 .padding(.top, 0)
         }
-        .frame(width: 290, alignment: .center)
+        .frame(width: width ?? 290, alignment: .center)
 
     }
 }
