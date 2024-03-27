@@ -32,7 +32,7 @@ struct WaitingView: View {
             //                    ForEach(viewModel.fishes.indices, id: \.self) { index in
             //                        Image(viewModel.fishes[index].imageName)
             //                            .resizable()
-            //.frame(width: viewModel.fishes[index].size, height: viewModel.fishes[index].size)
+            //                            .frame(width: viewModel.fishes[index].size, height: viewModel.fishes[index].size)
             //                            .position(viewModel.fishes[index].position)
             //                            .animation(.easeInOut)
             //                            .transition(.slide)
