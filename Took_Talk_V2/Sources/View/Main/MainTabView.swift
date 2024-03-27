@@ -12,24 +12,28 @@ struct MainTabView: View {
         TabView {
             FriendView()
                 .tabItem {
-                          Image(systemName: "1.square.fill")
-                          Text("First")
-                        }
+                    Image(systemName: "person.3.fill")
+                    Text("친구")
+                }
+                .badge(999)
             HomeView()
                 .tabItem {
-                          Image(systemName: "1.square.fill")
-                          Text("First")
-                        }
+                    Image(systemName: "house.fill")
+                    Text("홈")
+                }
             ProfileView()
+            
                 .tabItem {
-                    Image(systemName: "1.square.fill")
-                    Text("First")
-                  }
-                .badge(10)
-
-        }  
+                    Image(systemName: "person.fill")
+                    Text("프로필")
+                }
+        }
         .navigationBarBackButtonHidden()
         .font(.headline)
-
+        
     }
+}
+
+#Preview {
+    MainTabView()
 }
