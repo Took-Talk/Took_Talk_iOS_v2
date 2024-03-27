@@ -16,7 +16,7 @@ struct CustomSignSecureField: View {
         VStack {
             HStack {
                 Text(text ?? "")
-                    .font(.pretendard(size: 15))
+                    .font(.pretendard(15))
 
                 Spacer()
             }
