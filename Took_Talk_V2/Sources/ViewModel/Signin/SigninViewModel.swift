@@ -12,11 +12,12 @@ class SigninViewModel: ObservableObject {
     @Published var password: String = ""
     @Published var isPresented: Bool = false
     @Published var isSuccess: Bool = false
-    @Published var isWaitingViewActive: Bool = false
-    @Published var mainTabPath: Bool = false
+    @Published var isSignupViewActive: Bool = false
+    @Published var isFindPasswordViewActive: Bool = false
+    @Published var isMainTabViewActive: Bool = false
     
     func signup() {
-        isWaitingViewActive = true
+        isSignupViewActive = true
     }
     func login() {
         //        FirebaseAuth.Auth.auth().signIn(withEmail: id, password: password) { [weak self] user, error in
@@ -28,7 +29,7 @@ class SigninViewModel: ObservableObject {
         //                            //얼럿 띄우기
         //                    } else {
         //             성공이면 화면전환하고 프로필 가져오기
-        isWaitingViewActive = true
+        isMainTabViewActive = true
         //                            }
         //                }
     }
