@@ -10,25 +10,43 @@ import SwiftUI
 extension Font {
     
     static func pretendard(
-            size: CGFloat = 1,
-            weight: PretendardWeight = .regular
-        ) -> Font {
-            let fontName = "Pretendard-\(weight.rawValue)"
-            return Font.custom(fontName, size: size)
-        }
-}
-
-extension Font {
+        _ size: CGFloat = 1,
+        weight: PretendardWeight = .regular
+    ) -> Font {
+        let fontName = "Pretendard-\(weight.rawValue)"
+        return Font.custom(fontName, size: size)
+    }
     
-    static func pretendard(
-        size: CGFloat = 1,
+    static func pretendardUIFont(
+        _ size: CGFloat = 1,
         weight: PretendardWeight = .regular
     ) -> UIFont {
         let fontName = "Pretendard-\(weight.rawValue)"
-        guard let uiFont = UIFont(name: fontName, size: size) else {
-            fatalError("Failed to load font named \(fontName)")
+        
+        // Attempt to load the font directly using the font's file name
+        if let fontURL = Bundle.main.url(forResource: fontName, withExtension: "otf"),
+           let fontData = try? Data(contentsOf: fontURL),
+           let provider = CGDataProvider(data: fontData as CFData),
+           let cgFont = CGFont(provider) {
+            var error: Unmanaged<CFError>?
+            if CTFontManagerRegisterGraphicsFont(cgFont, &error) {
+                let fontDescriptor = CTFontDescriptorCreateWithAttributes([
+                    kCTFontNameAttribute: fontName as CFString,
+                    kCTFontSizeAttribute: size
+                ] as CFDictionary)
+                return UIFont(descriptor: fontDescriptor, size: size)
+            } else {
+                if let error = error?.takeRetainedValue() {
+                    print("Failed to register font: \(error)")
+                } else {
+                    print("Failed to register font with an unknown error")
+                }
+            }
+        } else {
+            print("Failed to load font data")
         }
-        return uiFont
+        
+        fatalError("Failed to load font named \(fontName)")
     }
 }
 
@@ -46,6 +64,6 @@ struct SampleView: View {
     
     var body: some View {
         Text("Hello, world")
-            .font(.pretendard(size: 10))
+            .font(.pretendard(10))
     }
 }
