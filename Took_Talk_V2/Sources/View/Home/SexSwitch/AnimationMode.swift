@@ -14,17 +14,17 @@ enum AnimationMode: Int, CaseIterable {
     var imageName: String {
         switch self {
         case .male:
-            return "person.fill" // SF Symbol name for disabled mode
+            return "person.fill"
         case .female:
-            return "person.fill" // SF Symbol name for reduced mode
+            return "person.fill"
         }
     }
     var title: String {
         switch self {
         case .male:
-            return "male" // Title for disabled mode
+            return "male"
         case .female:
-            return "female" // Title for reduced mode
+            return "female"
         }
         
     }
