@@ -41,20 +41,16 @@ struct SignupInterestView: View {
                         .frame(height: 40)
                         .padding(.horizontal, 3)
                         .foregroundColor(
-                            viewModel.selectedInterest.contains(idx)
-                            ? Color("myOrange")
-                            : viewModel.selectedInterest.contains(idx)
-                            ? Color(.systemGray2)
-                            : Color(.systemGray4)
+                            viewModel.selectedInterest.contains(idx) ?
+                            Color("myOrange"): viewModel.selectedInterest.contains(idx) ?
+                            Color(.systemGray2): Color(.systemGray4)
                         )
                         .overlay(
                             RoundedRectangle(cornerRadius: 20)
                                 .stroke(
-                                    viewModel.selectedInterest.contains(idx)
-                                    ? Color("myOrange")
-                                    : viewModel.relatedInterest.contains(idx)
-                                    ? Color(.systemGray2)
-                                    : Color(.systemGray3),
+                                    viewModel.selectedInterest.contains(idx) ?
+                                    Color("myOrange"): viewModel.relatedInterest.contains(idx) ?
+                                    Color(.systemGray2): Color(.systemGray3),
                                     lineWidth: 1
                                 )
                         )
@@ -69,8 +65,6 @@ struct SignupInterestView: View {
     }
 }
 
-
 #Preview {
     SignupInterestView()
 }
-
