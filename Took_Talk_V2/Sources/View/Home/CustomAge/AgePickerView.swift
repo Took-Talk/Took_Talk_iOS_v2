@@ -20,7 +20,7 @@ struct AgePickerView: UIViewRepresentable {
         self.textField.inputView = self.picker
         
         self.textField.textColor = .black
-        self.textField.font = Font.pretendard(size: 30)
+        self.textField.font = Font.pretendardUIFont(30)
         self.textField.textAlignment = .center
         self.textField.adjustsFontSizeToFitWidth = true
         self.textField.isEnabled = true
