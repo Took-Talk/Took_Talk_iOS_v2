@@ -1,5 +1,5 @@
 {
-  "originHash" : "214d025bf837f3f18d4a534860736396d83323539ad8b2418145fc7a45aa1eaa",
+  "originHash" : "bb50d33ecb5f81c3c2fda6f785077ec412f49b5d868d7103aae30ff503059e33",
   "pins" : [
     {
       "identity" : "alamofire",
@@ -8,15 +8,6 @@
       "state" : {
         "revision" : "723fa5a6c65812aec4a0d7cc432ee198883b6e00",
         "version" : "5.9.0"
-      }
-    },
-    {
-      "identity" : "opentds",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Mercen-Lee/OpenTDS.git",
-      "state" : {
-        "branch" : "main",
-        "revision" : "d01eb94fc0e787241ed5bb0f1cec32ce0c449af3"
       }
     },
     {

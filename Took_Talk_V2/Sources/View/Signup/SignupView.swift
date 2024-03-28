@@ -27,16 +27,13 @@ struct SignupView: View {
                     case 3:
                         SignupNicNameView()
                             .frame(width: 290, height: 350, alignment: .center)
-
                     case 4:
                         SignupInterestView()
                             .frame(maxWidth: .infinity)
                             .frame(height: 350)
-
                     case 5:
                         SignupMbtiView()
                             .frame(width: 290, height: 350, alignment: .center)
-
                     case 6:
                         SignupIntroduceView()
                             .frame(width: 290, height: 350, alignment: .center)

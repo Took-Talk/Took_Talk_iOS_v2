@@ -15,14 +15,13 @@ struct SignupPhoneNumberView: View {
         VStack(alignment: .leading) {
             HStack {
                 Text("전화번호")
-                    .font(.pretendard(size: 15))
+                    .font(.pretendard(15))
                 
                 Spacer()
             }
             .padding(.bottom, 0)
             
             HStack {
-                
                 TextField("전화번호를 입력해주세요", text: $viewModel.phoneNumber)
                 Button {
                     withAnimation(.default) {
@@ -31,7 +30,7 @@ struct SignupPhoneNumberView: View {
                     //
                 } label: {
                     Text("인증 요청")
-                        .font(.pretendard(size: 15))
+                        .font(.pretendard(15))
                 }
                 .buttonStyle(CustomStrokedButtonStyle(foregroundColor: .black,
                                                       borderColor: Color("myOrange"),
@@ -50,7 +49,7 @@ struct SignupPhoneNumberView: View {
             if viewModel.certificationNumberField {
                 HStack {
                     Text("인증번호")
-                        .font(.pretendard(size: 15))
+                        .font(.pretendard(15))
                     Spacer()
                 }
                 .padding(.bottom, 0)
@@ -82,7 +81,7 @@ struct SignupPhoneNumberView: View {
                             // 인증 확인 코드 추가
                         } label: {
                             Text("인증 확인")
-                                .font(.pretendard(size: 15))
+                                .font(.pretendard(15))
                         }
                         .buttonStyle(CustomStrokedButtonStyle(foregroundColor: .black, 
                                                               borderColor: Color("myOrange"),

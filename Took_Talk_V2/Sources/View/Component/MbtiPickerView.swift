@@ -17,15 +17,14 @@ struct MbtiPickerView: UIViewRepresentable {
         "ESTP", "ESFP", "ENFP", "ENTP",
         "ESTJ", "ESFJ", "ENFJ", "ENTJ"
     ]
+    
     @Binding var selected: String
     
     func makeUIView(context: Context) -> UITextField {
         self.textField.tintColor = .clear
         self.textField.inputView = self.picker
-        
         self.textField.textColor = .black
-        self.textField.font = Font.pretendard(size: 32, weight: .semibold)
-        
+        self.textField.font = Font.pretendardUIFont(32, weight: .bold)
         self.textField.textAlignment = .center
         self.textField.adjustsFontSizeToFitWidth = true
         self.textField.isEnabled = true
