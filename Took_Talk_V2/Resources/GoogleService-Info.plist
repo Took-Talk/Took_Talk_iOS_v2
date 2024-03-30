@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyC5YcyDV08ZdG5mft3e1dQWLc46UxObhHg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>120975222223</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>kr.hs.dgsw.Took-Talk-V2</string>
+	<key>PROJECT_ID</key>
+	<string>took-talk-7a7ff</string>
+	<key>STORAGE_BUCKET</key>
+	<string>took-talk-7a7ff.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:120975222223:ios:5c3ba5d08670bdaf711eba</string>
+</dict>
+</plist>

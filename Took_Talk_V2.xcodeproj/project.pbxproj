@@ -7,13 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		851D25D52BB3BAF5003A9EC3 /* ProfileInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851D25D42BB3BAF5003A9EC3 /* ProfileInformationView.swift */; };
+		851D25D82BB3CC34003A9EC3 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851D25D72BB3CC34003A9EC3 /* ProfileModel.swift */; };
 		852C0BE42BAF3B9200A7112D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 852C0BE32BAF3B9200A7112D /* Alamofire */; };
-		852C0BE72BAF3BAA00A7112D /* OpenTDS in Frameworks */ = {isa = PBXBuildFile; productRef = 852C0BE62BAF3BAA00A7112D /* OpenTDS */; };
 		852C0BEA2BAF3BB500A7112D /* WrappingHStack in Frameworks */ = {isa = PBXBuildFile; productRef = 852C0BE92BAF3BB500A7112D /* WrappingHStack */; };
+		855509312BB6416300AD82BE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 855509302BB6416300AD82BE /* GoogleService-Info.plist */; };
+		855509352BB641FD00AD82BE /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 855509342BB641FD00AD82BE /* FirebaseAuth */; };
+		855509372BB641FD00AD82BE /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 855509362BB641FD00AD82BE /* FirebaseFirestore */; };
+		855509392BB641FD00AD82BE /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 855509382BB641FD00AD82BE /* FirebaseFirestoreSwift */; };
+		8555093B2BB641FD00AD82BE /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 8555093A2BB641FD00AD82BE /* FirebaseStorage */; };
+		8555093E2BB653AD00AD82BE /* FirebaseidToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8555093D2BB653AD00AD82BE /* FirebaseidToken.swift */; };
 		85B199E72BAC8083007D9113 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85B199E22BAC807F007D9113 /* Preview Assets.xcassets */; };
 		85B199E92BAC8083007D9113 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B199E52BAC8080007D9113 /* ContentView.swift */; };
 		85B199EA2BAC8083007D9113 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85B199E62BAC8083007D9113 /* Assets.xcassets */; };
-		85B199EC2BAC809C007D9113 /* Took_Talk_V2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B199EB2BAC809C007D9113 /* Took_Talk_V2App.swift */; };
+		85B199EC2BAC809C007D9113 /* TookTalkV2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B199EB2BAC809C007D9113 /* TookTalkV2App.swift */; };
 		85B19B8A2BAC8BE3007D9113 /* SigninData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B19AD22BAC8BE3007D9113 /* SigninData.swift */; };
 		85B19B8B2BAC8BE3007D9113 /* SignupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B19AD42BAC8BE3007D9113 /* SignupData.swift */; };
 		85B19B8C2BAC8BE3007D9113 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B19AD82BAC8BE3007D9113 /* ChatView.swift */; };
@@ -64,13 +71,20 @@
 		85B19BCC2BAC8CFB007D9113 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 85B19BC42BAC8CFB007D9113 /* Pretendard-SemiBold.otf */; };
 		85B19BCD2BAC8CFB007D9113 /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 85B19BC52BAC8CFB007D9113 /* Pretendard-Thin.otf */; };
 		85C05C7F2BB168F40062E2FE /* .swiftlint.yml in Sources */ = {isa = PBXBuildFile; fileRef = 85C05C702BB116700062E2FE /* .swiftlint.yml */; };
+		85D1780C2BB490FD001F8162 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D1780B2BB490FD001F8162 /* ProfileViewModel.swift */; };
+		85D178102BB59D9D001F8162 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D1780F2BB59D9D001F8162 /* ButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		851D25D42BB3BAF5003A9EC3 /* ProfileInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInformationView.swift; sourceTree = "<group>"; };
+		851D25D72BB3CC34003A9EC3 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		855509302BB6416300AD82BE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8555093C2BB651DD00AD82BE /* Took-Talk-V2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Took-Talk-V2-Info.plist"; sourceTree = SOURCE_ROOT; };
+		8555093D2BB653AD00AD82BE /* FirebaseidToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseidToken.swift; sourceTree = "<group>"; };
 		85B199E22BAC807F007D9113 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		85B199E52BAC8080007D9113 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		85B199E62BAC8083007D9113 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		85B199EB2BAC809C007D9113 /* Took_Talk_V2App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Took_Talk_V2App.swift; sourceTree = "<group>"; };
+		85B199EB2BAC809C007D9113 /* TookTalkV2App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TookTalkV2App.swift; sourceTree = "<group>"; };
 		85B19AD22BAC8BE3007D9113 /* SigninData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigninData.swift; sourceTree = "<group>"; };
 		85B19AD42BAC8BE3007D9113 /* SignupData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupData.swift; sourceTree = "<group>"; };
 		85B19AD82BAC8BE3007D9113 /* ChatView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
@@ -122,6 +136,8 @@
 		85B19BC52BAC8CFB007D9113 /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.otf"; sourceTree = "<group>"; };
 		85C05C702BB116700062E2FE /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		85C05C782BB119000062E2FE /* Took_Talk_V2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Took_Talk_V2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		85D1780B2BB490FD001F8162 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		85D1780F2BB59D9D001F8162 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,15 +145,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				852C0BE72BAF3BAA00A7112D /* OpenTDS in Frameworks */,
+				855509392BB641FD00AD82BE /* FirebaseFirestoreSwift in Frameworks */,
 				852C0BEA2BAF3BB500A7112D /* WrappingHStack in Frameworks */,
+				855509372BB641FD00AD82BE /* FirebaseFirestore in Frameworks */,
+				855509352BB641FD00AD82BE /* FirebaseAuth in Frameworks */,
 				852C0BE42BAF3B9200A7112D /* Alamofire in Frameworks */,
+				8555093B2BB641FD00AD82BE /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		851D25D62BB3CC2A003A9EC3 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				851D25D72BB3CC34003A9EC3 /* ProfileModel.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		85B199522BAC7F9F007D9113 = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +178,7 @@
 		85B1995D2BAC7F9F007D9113 /* Took_Talk_V2 */ = {
 			isa = PBXGroup;
 			children = (
+				8555093C2BB651DD00AD82BE /* Took-Talk-V2-Info.plist */,
 				85B19B182BAC8BE3007D9113 /* Sources */,
 				85B19AD12BAC89D6007D9113 /* Resources */,
 			);
@@ -160,7 +188,8 @@
 		85B19AD12BAC89D6007D9113 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				85B199EB2BAC809C007D9113 /* Took_Talk_V2App.swift */,
+				855509302BB6416300AD82BE /* GoogleService-Info.plist */,
+				85B199EB2BAC809C007D9113 /* TookTalkV2App.swift */,
 				85B199E62BAC8083007D9113 /* Assets.xcassets */,
 				85B199E52BAC8080007D9113 /* ContentView.swift */,
 				85B19BC62BAC8CFB007D9113 /* Font */,
@@ -188,6 +217,7 @@
 		85B19AD62BAC8BE3007D9113 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				851D25D62BB3CC2A003A9EC3 /* Profile */,
 				85B19AD32BAC8BE3007D9113 /* Signin */,
 				85B19AD52BAC8BE3007D9113 /* Signup */,
 			);
@@ -212,6 +242,7 @@
 				85B19ADE2BAC8BE3007D9113 /* CustomSignTextField.swift */,
 				85B19ADF2BAC8BE3007D9113 /* CustomStrokedButtonStyle.swift */,
 				85B19AE02BAC8BE3007D9113 /* MbtiPickerView.swift */,
+				851D25D42BB3BAF5003A9EC3 /* ProfileInformationView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -277,13 +308,6 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
-		85B19AF42BAC8BE3007D9113 /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Protocol;
-			sourceTree = "<group>";
-		};
 		85B19AF62BAC8BE3007D9113 /* Signin */ = {
 			isa = PBXGroup;
 			children = (
@@ -327,15 +351,14 @@
 		85B19B042BAC8BE3007D9113 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				85B19AE12BAC8BE3007D9113 /* Component */,
 				85B19AF62BAC8BE3007D9113 /* Signin */,
 				85B19B002BAC8BE3007D9113 /* Signup */,
 				85B19AEF2BAC8BE3007D9113 /* Home */,
 				85B19ADA2BAC8BE3007D9113 /* Chat */,
-				85B19AE12BAC8BE3007D9113 /* Component */,
 				85B19AE62BAC8BE3007D9113 /* FriendList */,
 				85B19AF12BAC8BE3007D9113 /* Main */,
 				85B19AF32BAC8BE3007D9113 /* Profile */,
-				85B19AF42BAC8BE3007D9113 /* Protocol */,
 				85B19B032BAC8BE3007D9113 /* Waiting */,
 			);
 			path = View;
@@ -375,6 +398,8 @@
 				85B19B102BAC8BE3007D9113 /* SignupNicNameViewModel.swift */,
 				85B19B112BAC8BE3007D9113 /* SignupPasswordViewModel.swift */,
 				85B19B122BAC8BE3007D9113 /* SignupPhoneNumberViewModel.swift */,
+				85B19B0C2BAC8BE3007D9113 /* PageViewModel.swift */,
+				8555093D2BB653AD00AD82BE /* FirebaseidToken.swift */,
 			);
 			path = SubViewModel;
 			sourceTree = "<group>";
@@ -382,7 +407,6 @@
 		85B19B142BAC8BE3007D9113 /* Signup */ = {
 			isa = PBXGroup;
 			children = (
-				85B19B0C2BAC8BE3007D9113 /* PageViewModel.swift */,
 				85B19B132BAC8BE3007D9113 /* SubViewModel */,
 			);
 			path = Signup;
@@ -399,6 +423,7 @@
 		85B19B172BAC8BE3007D9113 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				85D1780A2BB490E8001F8162 /* Profile */,
 				85B19B062BAC8BE3007D9113 /* Chat */,
 				85B19B082BAC8BE3007D9113 /* Home */,
 				85B19B0B2BAC8BE3007D9113 /* Signin */,
@@ -444,6 +469,7 @@
 			isa = PBXGroup;
 			children = (
 				85B19BBF2BAC8CFB007D9113 /* Fonts.swift */,
+				85D1780F2BB59D9D001F8162 /* ButtonStyle.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -453,6 +479,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		85D1780A2BB490E8001F8162 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				85D1780B2BB490FD001F8162 /* ProfileViewModel.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -474,8 +508,11 @@
 			name = Took_Talk_V2;
 			packageProductDependencies = (
 				852C0BE32BAF3B9200A7112D /* Alamofire */,
-				852C0BE62BAF3BAA00A7112D /* OpenTDS */,
 				852C0BE92BAF3BB500A7112D /* WrappingHStack */,
+				855509342BB641FD00AD82BE /* FirebaseAuth */,
+				855509362BB641FD00AD82BE /* FirebaseFirestore */,
+				855509382BB641FD00AD82BE /* FirebaseFirestoreSwift */,
+				8555093A2BB641FD00AD82BE /* FirebaseStorage */,
 			);
 			productName = Took_Talk_V2;
 			productReference = 85C05C782BB119000062E2FE /* Took_Talk_V2.app */;
@@ -507,8 +544,8 @@
 			mainGroup = 85B199522BAC7F9F007D9113;
 			packageReferences = (
 				85B19BB42BAC8C01007D9113 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				852C0BE52BAF3BAA00A7112D /* XCRemoteSwiftPackageReference "OpenTDS" */,
 				852C0BE82BAF3BB500A7112D /* XCRemoteSwiftPackageReference "WrappingHStack" */,
+				8555092F2BB6407A00AD82BE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 85B199522BAC7F9F007D9113;
 			projectDirPath = "";
@@ -526,6 +563,7 @@
 			files = (
 				85B19BC82BAC8CFB007D9113 /* Pretendard-Bold.otf in Resources */,
 				85B199EA2BAC8083007D9113 /* Assets.xcassets in Resources */,
+				855509312BB6416300AD82BE /* GoogleService-Info.plist in Resources */,
 				85B19BCD2BAC8CFB007D9113 /* Pretendard-Thin.otf in Resources */,
 				85B19BCC2BAC8CFB007D9113 /* Pretendard-SemiBold.otf in Resources */,
 				85B19BC92BAC8CFB007D9113 /* Pretendard-Light.otf in Resources */,
@@ -569,7 +607,7 @@
 				85B19BA12BAC8BE3007D9113 /* SignupMbtiView.swift in Sources */,
 				85B19B962BAC8BE3007D9113 /* AgePickerView.swift in Sources */,
 				85B19BAA2BAC8BE3007D9113 /* SigninViewModel.swift in Sources */,
-				85B199EC2BAC809C007D9113 /* Took_Talk_V2App.swift in Sources */,
+				85B199EC2BAC809C007D9113 /* TookTalkV2App.swift in Sources */,
 				85B19B9A2BAC8BE3007D9113 /* HomeView.swift in Sources */,
 				85B19BA82BAC8BE3007D9113 /* ChatViewModel.swift in Sources */,
 				85B199E92BAC8083007D9113 /* ContentView.swift in Sources */,
@@ -579,12 +617,14 @@
 				85B19BA22BAC8BE3007D9113 /* SignupNicNameView.swift in Sources */,
 				85B19BAD2BAC8BE3007D9113 /* SignupInterestViewModel.swift in Sources */,
 				85B19B9C2BAC8BE3007D9113 /* ProfileView.swift in Sources */,
+				851D25D82BB3CC34003A9EC3 /* ProfileModel.swift in Sources */,
 				85B19BAE2BAC8BE3007D9113 /* SignupIntroduceViewModel.swift in Sources */,
 				85B19B942BAC8BE3007D9113 /* FriendListView.swift in Sources */,
 				85B19BC72BAC8CFB007D9113 /* Fonts.swift in Sources */,
 				85B19BB32BAC8BE3007D9113 /* WaitingViewModel.swift in Sources */,
 				85B19BB12BAC8BE3007D9113 /* SignupPasswordViewModel.swift in Sources */,
 				85B19B922BAC8BE3007D9113 /* CustomStrokedButtonStyle.swift in Sources */,
+				8555093E2BB653AD00AD82BE /* FirebaseidToken.swift in Sources */,
 				85B19B9E2BAC8BE3007D9113 /* PageView.swift in Sources */,
 				85B19B982BAC8BE3007D9113 /* AnimationMode.swift in Sources */,
 				85B19B902BAC8BE3007D9113 /* CustomSignSecureField.swift in Sources */,
@@ -596,6 +636,7 @@
 				85B19BA42BAC8BE3007D9113 /* SignupPhoneNumberView.swift in Sources */,
 				85B19BB02BAC8BE3007D9113 /* SignupNicNameViewModel.swift in Sources */,
 				85B19B9D2BAC8BE3007D9113 /* SigninView.swift in Sources */,
+				85D178102BB59D9D001F8162 /* ButtonStyle.swift in Sources */,
 				85B19BA02BAC8BE3007D9113 /* SignupIntroduceView.swift in Sources */,
 				85B19BA62BAC8BE3007D9113 /* Fish.swift in Sources */,
 				85B19B912BAC8BE3007D9113 /* CustomSignTextField.swift in Sources */,
@@ -604,8 +645,10 @@
 				85B19BAB2BAC8BE3007D9113 /* Token.swift in Sources */,
 				85B19B9F2BAC8BE3007D9113 /* SignupInterestView.swift in Sources */,
 				85B19B8E2BAC8BE3007D9113 /* CustomBackButton.swift in Sources */,
+				85D1780C2BB490FD001F8162 /* ProfileViewModel.swift in Sources */,
 				85B19BAF2BAC8BE3007D9113 /* SignupMbtiViewModel.swift in Sources */,
 				85B19BA32BAC8BE3007D9113 /* SignupPasswordView.swift in Sources */,
+				851D25D52BB3BAF5003A9EC3 /* ProfileInformationView.swift in Sources */,
 				85B19BAC2BAC8BE3007D9113 /* PageViewModel.swift in Sources */,
 				85B19B992BAC8BE3007D9113 /* SexSwitchView.swift in Sources */,
 				85B19BA72BAC8BE3007D9113 /* WaitingView.swift in Sources */,
@@ -742,12 +785,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Took_Talk_V2/Resources/Preview Content\"";
-				DEVELOPMENT_TEAM = W7X5HRD463;
+				DEVELOPMENT_ASSET_PATHS = "Took_Talk_V2/Resources/Preview\\ Content/Preview\\ Assets.xcassets Took_Talk_V2/Resources/Preview\\ Content";
+				DEVELOPMENT_TEAM = XCQRCQ3RAB;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "";
+				INFOPLIST_FILE = "Took-Talk-V2-Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -775,12 +818,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Took_Talk_V2/Resources/Preview Content\"";
-				DEVELOPMENT_TEAM = W7X5HRD463;
+				DEVELOPMENT_ASSET_PATHS = "Took_Talk_V2/Resources/Preview\\ Content/Preview\\ Assets.xcassets Took_Talk_V2/Resources/Preview\\ Content";
+				DEVELOPMENT_TEAM = XCQRCQ3RAB;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "";
+				INFOPLIST_FILE = "Took-Talk-V2-Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -825,20 +868,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		852C0BE52BAF3BAA00A7112D /* XCRemoteSwiftPackageReference "OpenTDS" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Mercen-Lee/OpenTDS.git";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
 		852C0BE82BAF3BB500A7112D /* XCRemoteSwiftPackageReference "WrappingHStack" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/dkk/WrappingHStack.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 2.2.11;
+			};
+		};
+		8555092F2BB6407A00AD82BE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.23.1;
 			};
 		};
 		85B19BB42BAC8C01007D9113 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
@@ -857,15 +900,30 @@
 			package = 85B19BB42BAC8C01007D9113 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
-		852C0BE62BAF3BAA00A7112D /* OpenTDS */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 852C0BE52BAF3BAA00A7112D /* XCRemoteSwiftPackageReference "OpenTDS" */;
-			productName = OpenTDS;
-		};
 		852C0BE92BAF3BB500A7112D /* WrappingHStack */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 852C0BE82BAF3BB500A7112D /* XCRemoteSwiftPackageReference "WrappingHStack" */;
 			productName = WrappingHStack;
+		};
+		855509342BB641FD00AD82BE /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8555092F2BB6407A00AD82BE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		855509362BB641FD00AD82BE /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8555092F2BB6407A00AD82BE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		855509382BB641FD00AD82BE /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8555092F2BB6407A00AD82BE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		8555093A2BB641FD00AD82BE /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8555092F2BB6407A00AD82BE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

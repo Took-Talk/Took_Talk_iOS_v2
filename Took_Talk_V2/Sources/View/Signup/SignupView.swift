@@ -9,14 +9,13 @@ import SwiftUI
 
 struct SignupView: View {
     @StateObject var viewModel = PageViewModel()
-    
+
     var body: some View {
         VStack {
             Image("TookTalk_Signup_Logo")
                 .frame(maxHeight: .infinity, alignment: .top)
                 .padding(.top, 37)
             VStack {
-                Group {
                     switch viewModel.progress {
                     case 1:
                         SignupPhoneNumberView()
@@ -40,7 +39,6 @@ struct SignupView: View {
 
                     default:
                         EmptyView()
-                    }
                 }
                 Spacer()
             }

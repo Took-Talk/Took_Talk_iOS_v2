@@ -11,7 +11,7 @@ struct SexSwitchView: View {
     @AppStorage("animationModeKey") private var animationsMode: AnimationMode = .male
     @Environment(\.colorScheme) var colorScheme
     
-    let color = Color.gray // Replace with your desired color
+    let color = Color.gray
     
     var body: some View {
         VStack {
