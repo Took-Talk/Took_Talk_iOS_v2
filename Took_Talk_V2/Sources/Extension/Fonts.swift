@@ -10,7 +10,7 @@ import SwiftUI
 extension Font {
     
     static func pretendard(
-        _ size: CGFloat = 1,
+        _ size: CGFloat = 16,
         weight: PretendardWeight = .regular
     ) -> Font {
         let fontName = "Pretendard-\(weight.rawValue)"
@@ -18,7 +18,7 @@ extension Font {
     }
     
     static func pretendardUIFont(
-        _ size: CGFloat = 1,
+        _ size: CGFloat = 16,
         weight: PretendardWeight = .regular
     ) -> UIFont {
         let fontName = "Pretendard-\(weight.rawValue)"
