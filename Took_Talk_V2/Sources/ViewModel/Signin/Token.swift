@@ -10,7 +10,6 @@ import Foundation
 enum TokenType {
     case grantType
     case accessToken
-    case refreshToken
 }
 class TokenManager {
     static func save(_ tokenType: TokenType, _ value: String) {
