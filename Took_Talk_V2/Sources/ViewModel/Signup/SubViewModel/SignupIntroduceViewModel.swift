@@ -8,6 +8,9 @@
 import SwiftUI
 
 class SignupIntroduceViewModel: ObservableObject {
-    @Published var introduce: String = ""
-    
+    @Published var bio: String = "" {
+        didSet {
+            NotificationCenter.default.post(name: .bioDidChange, object: bio)
+        }
+    }
 }

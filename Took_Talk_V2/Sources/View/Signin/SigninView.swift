@@ -8,11 +8,10 @@
 import SwiftUI
 
 struct SigninView: View {
-    
-    @Environment(\.dismiss) private var dismiss
-    
     @StateObject private var viewModel = SigninViewModel()
     
+    let signupSuccessPublish = NotificationCenter.default.publisher(for: .signupSuccess)
+
     var body: some View {
         NavigationStack {
             VStack {
@@ -24,11 +23,16 @@ struct SigninView: View {
                     .multilineTextAlignment(.center)
                     .font(.pretendard(12))
                     .frame(width: 250, height: 30, alignment: .top)
+                    .padding(.top, 50)
                 
                 VStack {
-                    CustomSignTextField(text: "아이디", placeholder: "아이디를 입력해주세요", textfieldValue: viewModel.id)
+                    CustomSignTextField(text: "아이디", 
+                                        placeholder: "아이디를 입력해주세요",
+                                        textfieldValue: $viewModel.number)
                     
-                    CustomSignSecureField(text: "비밀번호", placeholder: "비밀번호를 입력해주세요", textfieldValue: viewModel.password)
+                    CustomSignSecureField(text: "비밀번호", 
+                                          placeholder: "비밀번호를 입력해주세요",
+                                          textfieldValue: $viewModel.password)
                     
                     HStack {
                         Spacer()
@@ -53,72 +57,55 @@ struct SigninView: View {
                                     .fontWeight(.semibold)
                             }
                         }
-                        .frame(width: 80, alignment: .trailing)
-
-                        Rectangle()
-                            .foregroundColor(Color("myGray"))
-                            .frame(width: 1, height: 20, alignment: .trailing)
+                        .frame(width: 80)
                         
-                        Group {
-                            NavigationLink(value: viewModel.isSignupViewActive) {
-                                EmptyView()
-                            }
-                            .navigationDestination(for: Bool.self) { isActive in
-                                if isActive {
-                                    SignupView()
-                                }
-                            }
-                            .hidden()
-                            
-                            Button {
-                                viewModel.signup()
-                            } label: {
-                                Text("회원가입")
-                                    .font(.pretendard(13, weight: .thin))
-                                    .foregroundColor(Color.black)
-                                    .fontWeight(.semibold)
-                            }
+                        Rectangle()
+                            .foregroundColor(.black)
+                            .frame(width: 1, height: 20)
+                            .padding(.trailing, 3)
+                        
+                        Button {
+                            viewModel.signup()
+                        } label: {
+                            Text("회원가입")
+                                .font(.pretendard(13, weight: .thin))
+                                .foregroundColor(Color.black)
                         }
-                        .frame(maxWidth: .infinity, alignment: .trailing)
-
+                        .navigationDestination(isPresented: $viewModel.isSignupViewActive) {
+                            SignupView()
+                        }
                     }
                     .frame(width: 290, alignment: .trailing)
-
+                    
                     .padding(.bottom, 12)
                     .padding(.top, 10)
                     
                     Spacer()
                         .padding(.bottom, 70)
-
-                    Group {
-                        NavigationLink(value: viewModel.isMainTabViewActive) {
-                            EmptyView()
-                        }
-                        .navigationDestination(for: Bool.self) { isActive in
-                            if isActive {
-                                MainTabView()
-                            }
-                        }
-                        .hidden()
-                        
-                        Button(action: {
-                            viewModel.login()
-                        }) {
-                            Text("로그인")
-                                .font(.pretendard(20, weight: .regular))
-                                .frame(width: 320, height: 50)
-                        }
+                    
+                    Button {
+                        viewModel.login()
+                    } label: {
+                        Text("로그인")
+                            .font(.pretendard(20, weight: .regular))
+                            .frame(width: 320, height: 50)
                     }
                     .background(Color("myOrange"))
                     .foregroundColor(Color.white)
                     .cornerRadius(15)
                     .padding(.bottom, 87)
+                    .navigationDestination(isPresented: $viewModel.isMainTabViewActive) {
+                        MainTabView()
+                    }
                 }
                 .padding(.horizontal, 45)
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
                 
                 Spacer()
             }
+        }
+        .onReceive(signupSuccessPublish) { _ in
+            viewModel.isSignupViewActive = false
         }
     }
 }

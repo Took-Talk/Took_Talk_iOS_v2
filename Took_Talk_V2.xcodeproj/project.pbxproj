@@ -17,6 +17,7 @@
 		855509392BB641FD00AD82BE /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 855509382BB641FD00AD82BE /* FirebaseFirestoreSwift */; };
 		8555093B2BB641FD00AD82BE /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 8555093A2BB641FD00AD82BE /* FirebaseStorage */; };
 		8555093E2BB653AD00AD82BE /* FirebaseidToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8555093D2BB653AD00AD82BE /* FirebaseidToken.swift */; };
+		855509402BB824BD00AD82BE /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8555093F2BB824BD00AD82BE /* Notification.swift */; };
 		85B199E72BAC8083007D9113 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85B199E22BAC807F007D9113 /* Preview Assets.xcassets */; };
 		85B199E92BAC8083007D9113 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B199E52BAC8080007D9113 /* ContentView.swift */; };
 		85B199EA2BAC8083007D9113 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85B199E62BAC8083007D9113 /* Assets.xcassets */; };
@@ -81,6 +82,7 @@
 		855509302BB6416300AD82BE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8555093C2BB651DD00AD82BE /* Took-Talk-V2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Took-Talk-V2-Info.plist"; sourceTree = SOURCE_ROOT; };
 		8555093D2BB653AD00AD82BE /* FirebaseidToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseidToken.swift; sourceTree = "<group>"; };
+		8555093F2BB824BD00AD82BE /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		85B199E22BAC807F007D9113 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		85B199E52BAC8080007D9113 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		85B199E62BAC8083007D9113 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -470,6 +472,7 @@
 			children = (
 				85B19BBF2BAC8CFB007D9113 /* Fonts.swift */,
 				85D1780F2BB59D9D001F8162 /* ButtonStyle.swift */,
+				8555093F2BB824BD00AD82BE /* Notification.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -622,6 +625,7 @@
 				85B19B942BAC8BE3007D9113 /* FriendListView.swift in Sources */,
 				85B19BC72BAC8CFB007D9113 /* Fonts.swift in Sources */,
 				85B19BB32BAC8BE3007D9113 /* WaitingViewModel.swift in Sources */,
+				855509402BB824BD00AD82BE /* Notification.swift in Sources */,
 				85B19BB12BAC8BE3007D9113 /* SignupPasswordViewModel.swift in Sources */,
 				85B19B922BAC8BE3007D9113 /* CustomStrokedButtonStyle.swift in Sources */,
 				8555093E2BB653AD00AD82BE /* FirebaseidToken.swift in Sources */,

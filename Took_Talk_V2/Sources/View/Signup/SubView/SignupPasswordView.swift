@@ -11,10 +11,18 @@ struct SignupPasswordView: View {
     @StateObject private var viewModel = SignupPasswordViewModel()
     var body: some View {
         VStack {
-            CustomSignTextField(text: "비밀번호", placeholder: "비밀번호를 입력해주세요", textfieldValue: viewModel.password)
-            //                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+            CustomSignSecureField(
+                text: "비밀번호",
+                placeholder: "비밀번호를 입력해주세요",
+                textfieldValue: $viewModel.password
+            )
                 .padding(.bottom, 30)
-            CustomSignTextField(text: "비밀번호 확인", placeholder: "비밀번호를 확인해주세요", textfieldValue: viewModel.passwordCheck)
+            
+            CustomSignSecureField(
+                text: "비밀번호 확인",
+                placeholder: "비밀번호를 확인해주세요",
+                textfieldValue: $viewModel.passwordCheck
+            )
             
             Spacer()
         }

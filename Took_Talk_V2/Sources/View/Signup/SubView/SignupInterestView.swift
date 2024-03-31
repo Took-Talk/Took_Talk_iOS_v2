@@ -25,14 +25,14 @@ struct SignupInterestView: View {
             VStack(alignment: .leading) {
                 ScrollView {
                     WrappingHStack(viewModel.interestsArry) { idx in
-                        Button(action: {
-                            if viewModel.selectedInterest.contains(idx) {
-                                viewModel.selectedInterest.removeAll { $0 == idx }
+                        Button {
+                            if viewModel.interests.contains(idx) {
+                                viewModel.interests.removeAll { $0 == idx }
                             } else {
-                                viewModel.selectedInterest.append(idx)
+                                viewModel.interests.append(idx)
                             }
-                            print(viewModel.selectedInterest)
-                        }) {
+                            print(viewModel.interests)
+                        } label: {
                             Text("\(idx)")
                                 .font(.pretendard(weight: .light))
                                 .foregroundStyle(.black)
@@ -41,15 +41,14 @@ struct SignupInterestView: View {
                         .frame(height: 40)
                         .padding(.horizontal, 3)
                         .foregroundColor(
-                            viewModel.selectedInterest.contains(idx) ?
-                            Color("myOrange"): viewModel.selectedInterest.contains(idx) ?
+                            viewModel.interests.contains(idx) ?
+                            Color.myOrange: viewModel.interests.contains(idx) ?
                             Color(.systemGray2): Color(.systemGray4)
                         )
                         .overlay(
                             RoundedRectangle(cornerRadius: 20)
                                 .stroke(
-                                    viewModel.selectedInterest.contains(idx) ?
-                                    Color("myOrange"): viewModel.relatedInterest.contains(idx) ?
+                                    viewModel.interests.contains(idx) ?
                                     Color(.systemGray2): Color(.systemGray3),
                                     lineWidth: 1
                                 )

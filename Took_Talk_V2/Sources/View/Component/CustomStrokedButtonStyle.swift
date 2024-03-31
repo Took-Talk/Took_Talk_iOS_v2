@@ -13,6 +13,13 @@ struct CustomStrokedButtonStyle: ButtonStyle {
     var borderColor: Color
     var radius: CGFloat?
     
+    init(foregroundColor: Color, backgroundColor: Color? = nil, borderColor: Color, radius: CGFloat? = nil) {
+        self.foregroundColor = foregroundColor
+        self.backgroundColor = backgroundColor
+        self.borderColor = borderColor
+        self.radius = radius
+    }
+    
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .padding(10)
