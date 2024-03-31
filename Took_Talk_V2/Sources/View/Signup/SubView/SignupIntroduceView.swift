@@ -16,7 +16,7 @@ struct SignupIntroduceView: View {
             CustomSignTextField(
                 text: "자기소개",
                 placeholder: "자기소개를 20자 이내로 적어주세요",
-                textfieldValue: viewModel.introduce
+                textfieldValue: $viewModel.bio
             )
             Spacer()
         }

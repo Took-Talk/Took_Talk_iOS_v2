@@ -9,7 +9,11 @@ import SwiftUI
 import FirebaseAuth
 
 class SignupPhoneNumberViewModel: ObservableObject {
-    @Published var phoneNumber: String = "+1 650-555-3434"
+    @Published var phoneNumber: String = "+1 650-555-3434" {
+            didSet {
+                NotificationCenter.default.post(name: .phoneNumberDidChange, object: phoneNumber)
+            }
+        }
     @Published var certificationNumber: String = "654321"
     @Published var certificationNumberField: Bool = false
     @Published var isCertificate: Bool = false
@@ -23,7 +27,7 @@ class SignupPhoneNumberViewModel: ObservableObject {
                 print("⚠️error) phoneCertification.1", error.localizedDescription)
                 return
             }
-            if let verificationID = verificationID {
+            if verificationID != nil {
                 self.isCertificate = true
                 NotificationCenter.default.post(name: .phoneNumberVerified, object: nil)
                 print("Cusses phoneCertification", self.isCertificate)

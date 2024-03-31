@@ -9,36 +9,27 @@ import SwiftUI
 import Alamofire
 
 class SignupPasswordViewModel: ObservableObject {
-    
-    @Published var password = ""
-    @Published var passwordCheck = ""
-    @Published var progress: Int = 0
-    
-    func back() {
-        
-        //        progress + 1
-        //        sideEffect.routeToBack()
+    @Published var isSamePassword: Bool = false {
+        didSet {
+            NotificationCenter.default.post(name: .passwordCheck, object: nil)
+        }
     }
     
-    func next() {
-        progress += 1
+    @Published var password: String = "" {
+        didSet {
+            NotificationCenter.default.post(name: .passwordDidChange, object: password)
+        }
     }
     
-    func signup() {
-        //        if pwText == pwCk {
-        //            Auth.auth().createUser(withEmail: email, password: pwText
-        //            ) { (user, error) in
-        //                if user !=  nil{
-        ////                    self.sideEffect.routeToBack()// 뒤로가는 코드
-        //                }
-        //                else{
-        ////                    self.sideEffect.showAlert("회원가입 실패🚫", error!.localizedDescription) // 얼넛 띄우는 코드
-        //                }
-        //            }
-        //        }
-        //        else {
-        ////            self.sideEffect.showAlert("회원가입 실패🚫", "비밀번호가 일치하지 않습니다.") // 얼넛 띄우는 코드
-        //        }
+    @Published var passwordCheck = "" {
+        didSet {
+            onPasswordChange()
+        }
     }
     
+    func onPasswordChange() {
+        if password == passwordCheck {
+            self.isSamePassword = true
+        }
+    }
 }
