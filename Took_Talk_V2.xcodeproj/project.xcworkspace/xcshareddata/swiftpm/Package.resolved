@@ -1,5 +1,5 @@
 {
-  "originHash" : "960635ec40f496caf088be2f750ace014ee07322a55ee7b9d352ab16c1f6af81",
+  "originHash" : "f9f2f161fa24525d92e87aadb0fe89a5530005e6ef728aa21336bbcc77031ad4",
   "pins" : [
     {
       "identity" : "abseil-cpp-binary",
@@ -125,6 +125,15 @@
       "state" : {
         "revision" : "9f0c76544701845ad98716f3f6a774a892152bcb",
         "version" : "1.26.0"
+      }
+    },
+    {
+      "identity" : "swiftui-gif",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/globulus/swiftui-gif.git",
+      "state" : {
+        "revision" : "89af6b7e04b0dc0bf97a721d27fc87c4db8e3829",
+        "version" : "1.0.1"
       }
     },
     {
