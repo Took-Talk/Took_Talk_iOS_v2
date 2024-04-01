@@ -24,6 +24,7 @@ struct AgePickerView: UIViewRepresentable {
         self.textField.textAlignment = .center
         self.textField.adjustsFontSizeToFitWidth = true
         self.textField.isEnabled = true
+        self.textField.spellCheckingType = .no
         
         let toolbar = UIToolbar()
         let doneBtn = UIBarButtonItem(title: "완료", image: nil, primaryAction: context.coordinator.doneAction)

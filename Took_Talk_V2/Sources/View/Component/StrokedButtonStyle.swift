@@ -1,5 +1,5 @@
 //
-//  CustomStrokedButtonStyle.swift
+//  StrokedButtonStyle.swift
 //  Took_Talk
 //
 //  Created by 최시훈 on 3/10/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CustomStrokedButtonStyle: ButtonStyle {
+struct StrokedButtonStyle: ButtonStyle {
     var foregroundColor: Color
     var backgroundColor: Color?
     var borderColor: Color
