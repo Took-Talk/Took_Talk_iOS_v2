@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 extension Notification.Name {
     static let phoneNumberVerified = Notification.Name("PhoneNumberVerified")
     static let phoneNumberDidChange = Notification.Name("PhoneNumberDidChange")

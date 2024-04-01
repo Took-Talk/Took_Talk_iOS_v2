@@ -52,7 +52,7 @@ class SigninViewModel: ObservableObject {
                 print("로그인 성공")
                 self.isMainTabViewActive = true
             case .failure(let error):
-                print("/auth/signin", error.responseCode, error.localizedDescription)
+                print("/auth/signin", error.responseCode as Any, error.localizedDescription)
             }
         }
     }
