@@ -9,82 +9,131 @@ import SwiftUI
 
 struct ChatView: View {
     @StateObject var viewModel = ChatViewModel()
-    
+
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
-                ScrollView(showsIndicators: false) {
-                    VStack(spacing: 8) {
-                        HStack {
-                            Image(systemName: "person.fill")
-                                .frame(maxWidth: 32, alignment: .topLeading)
-                                .padding(.bottom, 16)
-                                .padding(.trailing, 4)
-                            
-                            HStack {
-                                Text("안녕!")
-                                    .padding()
-                            }
-                            .frame(maxWidth: 260, alignment: .leading)
-                            .background(Color(uiColor: .lightGray))
-                            .cornerRadius(20)
-                        }
-                        .frame(maxWidth: 360)
-                        HStack {
-                            Image(systemName: "person.fill")
-                                .frame(maxWidth: 32, alignment: .topLeading)
-                                .padding(.bottom, 16)
-                                .padding(.trailing, 4)
-                            
-                            HStack {
-                                Text("너의 관심사는 뭐야?")
-                                    .padding()
-                            }
-                            .frame(maxWidth: 260, alignment: .leading)
-                            .background(Color(uiColor: .lightGray))
-                            .cornerRadius(20)
-                        }
-                        .frame(maxWidth: 360)
-                    }
-//                    ForEach($viewModel.mockData) { message in
-//                        MessageView(message: message)
-////                            .padding(.top, 10)
-//                    }
-                }
-                HStack {
-//                    TextField("Aa", text : $viewModel.text, axis:.vertical)
-//                        .padding()
+                ScrollViewReader { proxy in
                     
-                    Button {
-//                        viewModel.sendMessage(text: viewModel.text)
-//                        viewModel.text = ""
+                    ScrollView(showsIndicators: false) {
+                        VStack(spacing: 3) {
+                            Spacer()
+                            CustomAsyncImageView(
+                                imageURL: "https://wallpapers.com/images/high/intense-harimau-walking-on-grass-m7h2k7q1z815w5zk.webp",
+                                size: 140)
+                            Text(viewModel.name)
+                                .font(.pretendard(20))
+                            
+                            Text(viewModel.mbti)
+                                .font(.pretendard(30))
+                            
+                            Text(viewModel.bio)
+                                .font(.pretendard(12))
+                                .padding(.top, 20)
+                            
+                            Text("\(viewModel.name)님이 입장하였습니다\n매너 대화 지켜주세요!")
+                                .font(.pretendard(12))
+                                .foregroundStyle(Color(.systemGray2))
+                                .padding(.bottom, 20)
+                                .multilineTextAlignment(.center)
+                                .padding(.top, 20)
+                            
+                            ForEach(viewModel.mockData) { message in
+                                MessageView(viewModel: viewModel, message: message)
+                                    .padding(.leading, 0)
+                                    .id(message.id) // Ensure each message has a unique ID
+                                
+                            }
+                        }
+                        .onChange(of: viewModel.mockData.count) { _ in
+                                // Scroll to the bottom when viewModel.mockData count changes
+                                withAnimation {
+                                    if !viewModel.mockData.isEmpty {
+                                        let lastIndex = viewModel.mockData.count - 1
+                                        let lastMessageId = viewModel.mockData[lastIndex].id
+                                        DispatchQueue.main.async {
+                                            proxy.scrollTo(lastMessageId, anchor: .bottom)
+                                        }
+                                    }
+                                }
+                            }
                         
-                    } label: {
-                        Image(systemName: "paperplane.fill")
-                            .foregroundColor(.black)
-                            .padding()
-                            .background(.mint)
-                            .cornerRadius(50)
-                            .padding(.trailing)
                     }
-                }.background(Color(uiColor: .systemGray6))
+                    .padding(.bottom, 5)
+                }
+                ZStack {
+                    HStack {
+                        Button {
+                            viewModel.photoButton()
+                        } label: {
+                            Image(systemName: "camera")
+                                .foregroundColor(.black)
+                                .foregroundStyle(.white)
+                                .clipShape(RoundedRectangle(cornerRadius: 14))
+                                .padding(.trailing)
+                                .frame(width: 28, height: 28)
+                                .font(.title2)
+                        }
+                        .padding(.leading, 15)
+                        
+                        RoundedRectangle(cornerRadius: 25)
+                            .stroke(Color.black, lineWidth: 0.5)
+                            .frame(width: 325, height: 50)
+                        
+                    }
+                    .padding(.trailing, 12)
+                    
+                    HStack {
+                        TextField("Aa", text: $viewModel.text, axis: .vertical)
+                            .padding(.leading, 70)
+                        
+                        Button {
+                            viewModel.sendMessage()
+                        } label: {
+                            
+                            Image(systemName: "paperplane.fill")
+                                .foregroundStyle(.myOrange)
+                                .frame(width: 28, height: 28)
+                                .clipShape(RoundedRectangle(cornerRadius: 14))
+                                .font(.title2)
+                            
+                        }
+                        .padding(.trailing, 26)
+                    }
+                }
+                .padding(.bottom, 10)
             }
-            .toolbar(.visible, for: .navigationBar)
+            .navigationBarBackButtonHidden(true)
+            .navigationBarItems(leading:
+                    Text("알파메일최시훈")
+            )
+            .navigationBarItems(leading:
+                                    Button {
+                
+            } label: {
+                HStack {
+                    Image(systemName: "person")
+                        .resizable()
+                        .frame(width: 20, height: 20)
+                        .foregroundColor(.black)
+                        .font(.system(size: 20))
+                }
+            })
+            .navigationBarItems(leading:
+                                    Button {
+                
+            } label: {
+                HStack {
+                    Image(systemName: "door.left.hand.open")
+                        .resizable()
+                        .frame(width: 20, height: 20)
+                        .foregroundColor(.black)
+                        .font(.system(size: 20))
+                }
+            })
             
         }
-        .navigationBarBackButtonHidden(true)
-        .navigationBarItems(leading: Button(action: {
-//            viewModel.navigation()
-        }) {
-            HStack {
-                Image(systemName: "door.left.hand.open")
-                    .resizable()
-                    .frame(width: 20, height: 20)
-                    .foregroundColor(.black)
-                    .font(.system(size: 20))
-                
-            }
-        })
+        
     }
 }
 
