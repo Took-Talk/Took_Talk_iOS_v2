@@ -8,58 +8,45 @@
 import SwiftUI
 
 struct HomeView: View {
-    @State var setAge: Int = 15
-    @State var isWaitingViewActive: Bool = false
-    @State private var isCustomBackButtonHidden = true
+
     @StateObject var viewModel = HomeViewModel()
-    
+
     var body: some View {
         NavigationView {
             VStack(spacing: 0) {
                 Image("TookTalkMainLogo")
-                    .padding(.top, 30)
+                    .padding(.top, 20)
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
                 
-                Text("상대의 MBTI")
-                    .foregroundStyle(.black)
-                    .frame(width: 200, height: 50, alignment: .top)
-                    .font(.pretendard(20))
-                    .padding(.top, -20)
+                HomeExplanationView(text: "상대의 MBTI")
                 
                 MbtiPickerView(selected: $viewModel.mbti)
                     .frame(width: 79, height: 39)
                     .padding(.horizontal, 10)
                     .padding(.vertical, 5)
-
                     .overlay(
                         RoundedRectangle(cornerRadius: 16)
                             .stroke(Color("myOrange"), lineWidth: 1)
                     )
-                    .padding(.vertical, 5)
+                    .padding(.bottom, 5)
                 
-                Text("상대의 나이")
-                    .foregroundStyle(.black)
-                    .frame(width: 200, height: 50, alignment: .center)
-                    .font(.pretendard(20))
+                HomeExplanationView(text: "상대의 나이")
                 
-                AgePickerView(values: Array(14...19), selected: $setAge)
-                    .foregroundStyle(.black)
-                    .frame(width: 76, height: 50, alignment: .center)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 16)
-                            .stroke(Color("myOrange"), lineWidth: 1)
-                    )
-                    .padding(.vertical, 5)
-                    .padding(.horizontal, 10)
+                AgePickerView(
+                    values: Array(14...19),
+                    selected: $viewModel.setAge
+                )
+                .foregroundStyle(.black)
+                .frame(width: 76, height: 50, alignment: .center)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 16)
+                        .stroke(Color("myOrange"), lineWidth: 1)
+                )
+                .padding(.bottom, 5)
+                .padding(.horizontal, 10)
                 
-                //                MbtiPickerView(selected: $viewModel.mbti)
-                //                    .frame()
-                //                    .background(.red)
+                HomeExplanationView(text: "상대의 성별")
                 
-                Text("상대의 성별")
-                    .foregroundStyle(.black)
-                    .font(.pretendard(20))
-                    .frame(width: 200, height: 50, alignment: .center)
                 SexSwitchView()
                     .frame(width: 275, height: 120)
                     .padding(.horizontal, 50)
@@ -68,43 +55,45 @@ struct HomeView: View {
                             .stroke(Color.gray, lineWidth: 1)
                             .padding(.horizontal, 65)
                             .padding(.vertical, -10)
-                        
                     )
                 
-                    .padding(.bottom, 25)
+                    .padding(.bottom, 50)
                 Button {
-//                    viewModel.routeToWaitingView()
+                    viewModel.navigationChatView()
                 } label: {
                     Text("START")
                         .font(.pretendard(20, weight: .bold))
                         .foregroundColor(.white)
+                        .frame(width: 137, height: 45, alignment: .center)
                 }
-                .frame(width: 137, height: 45, alignment: .center)
-                .background(Color("myOrange"))
+                .background(Color.myOrange)
                 .cornerRadius(10)
+                .navigationDestination(isPresented: $viewModel.isChatViewActive) {
+                    ChatView()
+                }
                 
                 Spacer()
                     .frame(height: 80)
             }
-        }
-        .toolbar(.visible, for: .navigationBar)
-        .navigationBarBackButtonHidden(true)
-        .navigationBarItems(trailing: 
-        Button(action: {
-            
-        }) {
-            HStack {
-                Image(systemName: "gearshape")
-                    .resizable()
-                    .frame(width: 20, height: 20)
-                    .foregroundColor(.black)
-                    .font(.system(size: 20))
+            .toolbar(.visible, for: .navigationBar)
+            .navigationBarBackButtonHidden(true)
+            .navigationBarItems(trailing:
+                                    Button {
                 
-            }
-        })
+            } label: {
+                HStack {
+                    Image(systemName: "gearshape")
+                        .resizable()
+                        .frame(width: 20, height: 20)
+                        .foregroundColor(.black)
+                        .font(.system(size: 20))
+                    
+                }
+            })
+        }
     }
 }
 
 #Preview {
-    HomeView()
+    MainTabView()
 }

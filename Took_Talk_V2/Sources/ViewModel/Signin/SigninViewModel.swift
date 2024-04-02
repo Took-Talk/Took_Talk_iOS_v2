@@ -40,20 +40,20 @@ class SigninViewModel: ObservableObject {
                 "x-frame-options": "DENY",
                 "x-xss-protection": "0"
         ]
-        AF.request("\(api)auth/signin",
-                       method: .post,
-                       parameters: parameters,
-                       encoding: JSONEncoding.default,
-                       headers: headers)
-            .validate()
-        .responseDecodable(of: SigninData.self) { response in
-            switch response.result {
-            case .success(let value):
-                print("로그인 성공")
+//        AF.request("\(api)auth/signin",
+//                       method: .post,
+//                       parameters: parameters,
+//                       encoding: JSONEncoding.default,
+//                       headers: headers)
+//            .validate()
+//        .responseDecodable(of: SigninData.self) { response in
+//            switch response.result {
+//            case .success(let value):
+//                print("로그인 성공")
                 self.isMainTabViewActive = true
-            case .failure(let error):
-                print("/auth/signin", error.responseCode as Any, error.localizedDescription)
-            }
-        }
+//            case .failure(let error):
+//                print("/auth/signin", error.responseCode as Any, error.localizedDescription)
+//            }
+//        }
     }
 }

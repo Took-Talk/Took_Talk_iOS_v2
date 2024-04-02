@@ -1,5 +1,5 @@
 //
-//  StrokedButtonStyle.swift
+//  StrokedButton.swift
 //  Took_Talk
 //
 //  Created by 최시훈 on 3/10/24.

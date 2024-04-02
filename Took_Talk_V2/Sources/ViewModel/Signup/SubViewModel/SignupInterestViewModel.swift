@@ -9,10 +9,13 @@ import SwiftUI
 
 class SignupInterestViewModel: ObservableObject {
     @Published var phoneNumber: String = ""
-    @Published var certificationNumber: String = ""
-    @Published var selectedInterest = [String]()
     @Published var relatedInterest = [String]()
-    
+    @Published var interests = [String]() {
+        didSet {
+            NotificationCenter.default.post(name: .interestsDidChange, object: interests)
+        }
+    }
+        
     let interestsArry = [
         "🏸 배드민턴", "🍷 와인", "🎊 축제", "🪴 식물 관리", "🎤 코노", "🧘 필라테스",
         "📰 정치", "🙏 종교", "🏋️ 웨이트 트레이닝", "🎬 공연 감상",
