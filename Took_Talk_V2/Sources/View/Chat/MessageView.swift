@@ -8,26 +8,24 @@
 import SwiftUI
 
 struct MessageView: View {
-//    var message: Message
+    @ObservedObject var viewModel: ChatViewModel
+    let message: Message
     var body: some View {
-            HStack {
-//                HStack {
-////                    Text(message.text)
-//                        .padding()
-//                }
-//                .frame(maxWidth: 260, alignment: .leading)
-//                .background(Color(uiColor: .systemBlue))
-//                .cornerRadius(20)
-//                
-                Image(systemName: "person.fill")
-                    .frame(maxWidth: 32, alignment: .topLeading)
-                    .padding(.bottom, 16)
-                    .padding(.trailing, 4)
-            }
-            .frame(maxWidth: 360, alignment: .trailing)
+        HStack {
+            Spacer()
+            
+            Text(message.text)
+                .padding(.horizontal, 8)
+                .padding(.vertical, 10)
+                .overlay(
+                    RoundedCorner(radius: 10,
+                                  corners: [.topLeft, .topRight, .bottomLeft])
+                    .stroke(Color.myOrange, lineWidth: 0.7)
+                )
+                .frame(maxWidth: 260, alignment: .trailing)
+                .padding(.trailing, 18)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .padding(.bottom, viewModel.isUidSame ? 0 : 5)
     }
 }
-
-//#Preview {
-//    MessageView(message: Message(userUid: "", text: "안녕 ㅊ", photoURL: "", createdAt: ""))
-//}
