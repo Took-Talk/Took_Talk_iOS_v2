@@ -9,8 +9,8 @@ import SwiftUI
 import Alamofire
 
 class SigninViewModel: ObservableObject {
-    @Published var number: String = ""
-    @Published var password: String = ""
+    @Published var number: String = "3"
+    @Published var password: String = "3"
     @Published var isPresented: Bool = false
     @Published var isSuccess: Bool = false
     @Published var isSignupViewActive: Bool = false
@@ -40,20 +40,24 @@ class SigninViewModel: ObservableObject {
                 "x-frame-options": "DENY",
                 "x-xss-protection": "0"
         ]
-//        AF.request("\(api)auth/signin",
-//                       method: .post,
-//                       parameters: parameters,
-//                       encoding: JSONEncoding.default,
-//                       headers: headers)
-//            .validate()
-//        .responseDecodable(of: SigninData.self) { response in
-//            switch response.result {
-//            case .success(let value):
-//                print("로그인 성공")
+        AF.request("\(api)auth/signin",
+                       method: .post,
+                       parameters: parameters,
+                       encoding: JSONEncoding.default,
+                       headers: /*headers*/
+                    ["content-type": "application/json", "accept": "*/*"]
+        )
+            .validate()
+        .responseDecodable(of: SigninData.self) { response in
+            switch response.result {
+            case .success(let value):
+                TokenManager.save(.grantType, value.type)
+                TokenManager.save(.accessToken, value.token)
+                print("token: \n", value.type, value.token)
                 self.isMainTabViewActive = true
-//            case .failure(let error):
-//                print("/auth/signin", error.responseCode as Any, error.localizedDescription)
-//            }
-//        }
+            case .failure(let error):
+                print("/auth/signin", error.responseCode as Any, error.localizedDescription)
+            }
+        }
     }
 }
