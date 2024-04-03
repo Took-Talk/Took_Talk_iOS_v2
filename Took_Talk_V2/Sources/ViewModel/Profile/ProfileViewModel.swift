@@ -5,7 +5,8 @@
 //  Created by 최시훈 on 3/28/24.
 //
 
-import Foundation
+import SwiftUI
+import Alamofire
 
 class ProfileViewModel: ObservableObject {
     @Published var isPressed: Bool = false
@@ -16,4 +17,31 @@ class ProfileViewModel: ObservableObject {
     @Published var mbti: String = "ESTP"
     @Published var interests = ["알파", "메일", "최시훈"]
     @Published var bio: String = "자기소개"
+    
+    func getUserInfo() {
+        AF.request("\(api)auth/userinfo",
+                   method: .get,
+                   encoding: JSONEncoding.default,
+                   headers: [
+                    "Authorization": "\(TokenManager.get(.grantType)!) \(TokenManager.get(.accessToken)!)"
+                   ]
+        )
+        .validate()
+        .responseDecodable(of: ProfileModel.self) { response in
+            switch response.result {
+            case.success(let value):
+                self.number = value.number
+                self.nickname = value.nickname
+                self.gender = value.gender
+                self.age = value.age
+                self.mbti = value.mbti
+                self.interests = value.interests
+                self.bio = value.bio
+            case .failure(let error):
+                print(error)
+                print("로그인 다시하셈 ㅅㄱ\(error._code) \(error.localizedDescription)")
+                
+            }
+        }
+    }
 }

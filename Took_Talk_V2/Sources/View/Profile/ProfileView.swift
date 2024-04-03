@@ -96,6 +96,7 @@ struct ProfileView: View {
                         if viewModel.isPressed {
                             
                         }
+                        
                         ProfileInformationView(
                             imageName: "doc.text.magnifyingglass",
                             text: "MBTI", 
@@ -103,7 +104,7 @@ struct ProfileView: View {
                         )
                         
                     }
-                    .padding(.leading, 50)
+                    .padding(.leading, 40)
                     
                     Divider()
                         .frame(width: 292, height: 0.7)
@@ -122,7 +123,7 @@ struct ProfileView: View {
                                     .foregroundStyle(.red)
                                     .padding(.leading, 15)
                             }
-                            .frame(width: 290,height: 30, alignment: .leading)
+                            .frame(width: 290, height: 30, alignment: .leading)
                             
                             Spacer()
                         }
@@ -143,16 +144,23 @@ struct ProfileView: View {
                         }
                     }
                     .padding(.top, 10)
-                    .padding(.leading, 50)
+                    .padding(.leading, 45)
                     
                 }
             }
             .navigationTitle("프로필")
             .navigationBarTitleDisplayMode(.large)
+            .onAppear {
+                viewModel.getUserInfo()
+            }
+            .refreshable {
+                viewModel.getUserInfo()
+            }
         }
+        
     }
 }
 
 #Preview {
-    ProfileView()
+    MainTabView()
 }
