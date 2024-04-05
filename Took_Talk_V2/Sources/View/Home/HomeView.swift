@@ -15,8 +15,8 @@ struct HomeView: View {
         NavigationView {
             VStack(spacing: 0) {
                 Image("TookTalkMainLogo")
-                    .padding(.top, 20)
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+                    .padding(.top, -20)
                 
                 HomeExplanationView(text: "상대의 MBTI")
                 
@@ -75,8 +75,6 @@ struct HomeView: View {
                 Spacer()
                     .frame(height: 80)
             }
-            .toolbar(.visible, for: .navigationBar)
-            .navigationBarBackButtonHidden(true)
             .navigationBarItems(trailing:
                                     Button {
                 

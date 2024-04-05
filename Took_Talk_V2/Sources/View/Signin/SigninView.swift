@@ -96,6 +96,9 @@ struct SigninView: View {
         .onReceive(signupSuccessPublish) { _ in
             viewModel.isSignupViewActive = false
         }
+        .onAppear {
+            viewModel.login()
+        }
     }
 }
 

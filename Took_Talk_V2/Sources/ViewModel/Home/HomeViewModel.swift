@@ -11,9 +11,11 @@ class HomeViewModel: ObservableObject {
     @Published var mbti = "ESTP"
     @Published var setAge: Int = 15
     @Published var isWaitingViewActive: Bool = false
-    @Published var isCustomBackButtonHidden = true
+    @Published var isCustomBackButtonHidden: Bool = true
+    @Published var isMatchingViewActive: Bool = false
+    @Published var isChatViewActive: Bool = false
 
-//    func routeToWaitingView() {
-//        //WaitingView로 이동
-//    }
+    func navigationChatView() {
+        self.isChatViewActive = true
+    }
 }

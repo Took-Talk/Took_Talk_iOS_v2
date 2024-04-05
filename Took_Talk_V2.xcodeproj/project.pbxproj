@@ -11,6 +11,9 @@
 		851D25D82BB3CC34003A9EC3 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851D25D72BB3CC34003A9EC3 /* ProfileModel.swift */; };
 		852C0BE42BAF3B9200A7112D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 852C0BE32BAF3B9200A7112D /* Alamofire */; };
 		852C0BEA2BAF3BB500A7112D /* WrappingHStack in Frameworks */ = {isa = PBXBuildFile; productRef = 852C0BE92BAF3BB500A7112D /* WrappingHStack */; };
+		85543B692BBEC30100941045 /* MultiLineHStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85543B682BBEC30100941045 /* MultiLineHStack.swift */; };
+		85543B6B2BBEC33600941045 /* SignleLineHStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85543B6A2BBEC33600941045 /* SignleLineHStack.swift */; };
+		85543B6D2BBEC34C00941045 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85543B6C2BBEC34C00941045 /* String.swift */; };
 		855509312BB6416300AD82BE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 855509302BB6416300AD82BE /* GoogleService-Info.plist */; };
 		855509352BB641FD00AD82BE /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 855509342BB641FD00AD82BE /* FirebaseAuth */; };
 		855509372BB641FD00AD82BE /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 855509362BB641FD00AD82BE /* FirebaseFirestore */; };
@@ -83,11 +86,18 @@
 		85D1780C2BB490FD001F8162 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D1780B2BB490FD001F8162 /* ProfileViewModel.swift */; };
 		85D178102BB59D9D001F8162 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D1780F2BB59D9D001F8162 /* ButtonStyle.swift */; };
 		85E8D3642BB8945500E38D8B /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E8D3632BB8945500E38D8B /* Message.swift */; };
+		85F682C92BBD9B4E00E8FA8B /* CustomTabView in Frameworks */ = {isa = PBXBuildFile; productRef = 85F682C82BBD9B4E00E8FA8B /* CustomTabView */; };
+		85F682CC2BBD9BD000E8FA8B /* OpenTDS in Frameworks */ = {isa = PBXBuildFile; productRef = 85F682CB2BBD9BD000E8FA8B /* OpenTDS */; };
+		85F682CF2BBE40EA00E8FA8B /* CustomWrappingHStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F682CE2BBE40EA00E8FA8B /* CustomWrappingHStack.swift */; };
+		85F682D12BBE44A400E8FA8B /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F682D02BBE44A400E8FA8B /* List.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		851D25D42BB3BAF5003A9EC3 /* ProfileInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInformationView.swift; sourceTree = "<group>"; };
 		851D25D72BB3CC34003A9EC3 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		85543B682BBEC30100941045 /* MultiLineHStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiLineHStack.swift; sourceTree = "<group>"; };
+		85543B6A2BBEC33600941045 /* SignleLineHStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignleLineHStack.swift; sourceTree = "<group>"; };
+		85543B6C2BBEC34C00941045 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		855509302BB6416300AD82BE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8555093C2BB651DD00AD82BE /* Took-Talk-V2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Took-Talk-V2-Info.plist"; sourceTree = SOURCE_ROOT; };
 		8555093D2BB653AD00AD82BE /* FirebaseidToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseidToken.swift; sourceTree = "<group>"; };
@@ -157,6 +167,8 @@
 		85D1780B2BB490FD001F8162 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		85D1780F2BB59D9D001F8162 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 		85E8D3632BB8945500E38D8B /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		85F682CE2BBE40EA00E8FA8B /* CustomWrappingHStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomWrappingHStack.swift; sourceTree = "<group>"; };
+		85F682D02BBE44A400E8FA8B /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,8 +176,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85F682CC2BBD9BD000E8FA8B /* OpenTDS in Frameworks */,
 				855509392BB641FD00AD82BE /* FirebaseFirestoreSwift in Frameworks */,
 				852C0BEA2BAF3BB500A7112D /* WrappingHStack in Frameworks */,
+				85F682C92BBD9B4E00E8FA8B /* CustomTabView in Frameworks */,
 				855509372BB641FD00AD82BE /* FirebaseFirestore in Frameworks */,
 				855509352BB641FD00AD82BE /* FirebaseAuth in Frameworks */,
 				852C0BE42BAF3B9200A7112D /* Alamofire in Frameworks */,
@@ -271,11 +285,14 @@
 				85B19ADB2BAC8BE3007D9113 /* CustomBackButton.swift */,
 				85B19ADE2BAC8BE3007D9113 /* CustomSignTextField.swift */,
 				85B19ADD2BAC8BE3007D9113 /* CustomSignSecureField.swift */,
+				85F682CE2BBE40EA00E8FA8B /* CustomWrappingHStack.swift */,
 				85B19AE02BAC8BE3007D9113 /* MbtiPickerView.swift */,
 				851D25D42BB3BAF5003A9EC3 /* ProfileInformationView.swift */,
 				85C2EE9C2BBA4FDA000EFC9E /* HomeExplanationView.swift */,
 				85B9CCC72BBB30A9008CD2D1 /* AsyncImage.swift */,
 				85B9CCCB2BBBE48C008CD2D1 /* ChatInputBar.swift */,
+				85543B682BBEC30100941045 /* MultiLineHStack.swift */,
+				85543B6A2BBEC33600941045 /* SignleLineHStack.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -384,6 +401,7 @@
 		85B19B042BAC8BE3007D9113 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				85F682CD2BBE40C000E8FA8B /* Custom */,
 				8579B2112BBBF57A00495C41 /* Style */,
 				85B19AE12BAC8BE3007D9113 /* Component */,
 				85B19AF62BAC8BE3007D9113 /* Signin */,
@@ -507,6 +525,8 @@
 				85D1780F2BB59D9D001F8162 /* ButtonStyle.swift */,
 				8555093F2BB824BD00AD82BE /* Notification.Name.swift */,
 				85556F7B2BB8655F00100F0A /* NotificationCenter.swift */,
+				85F682D02BBE44A400E8FA8B /* List.swift */,
+				85543B6C2BBEC34C00941045 /* String.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -534,6 +554,13 @@
 			path = Message;
 			sourceTree = "<group>";
 		};
+		85F682CD2BBE40C000E8FA8B /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -559,6 +586,8 @@
 				855509382BB641FD00AD82BE /* FirebaseFirestoreSwift */,
 				8555093A2BB641FD00AD82BE /* FirebaseStorage */,
 				85C2EE9F2BBA60AD000EFC9E /* SwiftUIGIF */,
+				85F682C82BBD9B4E00E8FA8B /* CustomTabView */,
+				85F682CB2BBD9BD000E8FA8B /* OpenTDS */,
 			);
 			productName = Took_Talk_V2;
 			productReference = 85C05C782BB119000062E2FE /* Took_Talk_V2.app */;
@@ -593,6 +622,8 @@
 				852C0BE82BAF3BB500A7112D /* XCRemoteSwiftPackageReference "WrappingHStack" */,
 				8555092F2BB6407A00AD82BE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				85C2EE9E2BBA60AD000EFC9E /* XCRemoteSwiftPackageReference "swiftui-gif" */,
+				85F682C72BBD9B4E00E8FA8B /* XCRemoteSwiftPackageReference "SwiftUI-CustomTabView" */,
+				85F682CA2BBD9BD000E8FA8B /* XCRemoteSwiftPackageReference "OpenTDS" */,
 			);
 			productRefGroup = 85B199522BAC7F9F007D9113;
 			projectDirPath = "";
@@ -668,15 +699,19 @@
 				8579B2132BBBF58800495C41 /* RoundedCorner.swift in Sources */,
 				85B19BAD2BAC8BE3007D9113 /* SignupInterestViewModel.swift in Sources */,
 				85B19B9C2BAC8BE3007D9113 /* ProfileView.swift in Sources */,
+				85F682CF2BBE40EA00E8FA8B /* CustomWrappingHStack.swift in Sources */,
 				851D25D82BB3CC34003A9EC3 /* ProfileModel.swift in Sources */,
 				85B9CCCC2BBBE48C008CD2D1 /* ChatInputBar.swift in Sources */,
 				85B19BAE2BAC8BE3007D9113 /* SignupIntroduceViewModel.swift in Sources */,
 				85B19B942BAC8BE3007D9113 /* FriendListView.swift in Sources */,
 				855509422BB8425E00AD82BE /* Text.swift in Sources */,
+				85543B6B2BBEC33600941045 /* SignleLineHStack.swift in Sources */,
 				85B19BC72BAC8CFB007D9113 /* Fonts.swift in Sources */,
+				85543B6D2BBEC34C00941045 /* String.swift in Sources */,
 				85B19BB32BAC8BE3007D9113 /* WaitingViewModel.swift in Sources */,
 				855509402BB824BD00AD82BE /* Notification.Name.swift in Sources */,
 				855509442BB85F9400AD82BE /* api.swift in Sources */,
+				85F682D12BBE44A400E8FA8B /* List.swift in Sources */,
 				85B19BB12BAC8BE3007D9113 /* SignupPasswordViewModel.swift in Sources */,
 				85B19B922BAC8BE3007D9113 /* StrokedButton.swift in Sources */,
 				85B9CCC82BBB30A9008CD2D1 /* AsyncImage.swift in Sources */,
@@ -706,6 +741,7 @@
 				85B19BA32BAC8BE3007D9113 /* SignupPasswordView.swift in Sources */,
 				851D25D52BB3BAF5003A9EC3 /* ProfileInformationView.swift in Sources */,
 				85B19BAC2BAC8BE3007D9113 /* PageViewModel.swift in Sources */,
+				85543B692BBEC30100941045 /* MultiLineHStack.swift in Sources */,
 				85B19B992BAC8BE3007D9113 /* SexSwitchView.swift in Sources */,
 				85B19BA72BAC8BE3007D9113 /* WaitingView.swift in Sources */,
 				85B19B8B2BAC8BE3007D9113 /* SignupData.swift in Sources */,
@@ -956,6 +992,22 @@
 				minimumVersion = 1.0.1;
 			};
 		};
+		85F682C72BBD9B4E00E8FA8B /* XCRemoteSwiftPackageReference "SwiftUI-CustomTabView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/NicFontana/SwiftUI-CustomTabView.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		85F682CA2BBD9BD000E8FA8B /* XCRemoteSwiftPackageReference "OpenTDS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Mercen-Lee/OpenTDS.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -993,6 +1045,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 85C2EE9E2BBA60AD000EFC9E /* XCRemoteSwiftPackageReference "swiftui-gif" */;
 			productName = SwiftUIGIF;
+		};
+		85F682C82BBD9B4E00E8FA8B /* CustomTabView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85F682C72BBD9B4E00E8FA8B /* XCRemoteSwiftPackageReference "SwiftUI-CustomTabView" */;
+			productName = CustomTabView;
+		};
+		85F682CB2BBD9BD000E8FA8B /* OpenTDS */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85F682CA2BBD9BD000E8FA8B /* XCRemoteSwiftPackageReference "OpenTDS" */;
+			productName = OpenTDS;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -26,6 +26,8 @@ struct SignupPasswordView: View {
             
             Spacer()
         }
+        .frame(width: 290, alignment: .leading)
+
     }
 }
 

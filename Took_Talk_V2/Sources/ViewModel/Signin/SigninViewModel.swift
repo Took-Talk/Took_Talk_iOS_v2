@@ -40,15 +40,21 @@ class SigninViewModel: ObservableObject {
                 "x-frame-options": "DENY",
                 "x-xss-protection": "0"
         ]
+        let startTime = DispatchTime.now()
+
         AF.request("\(api)auth/signin",
-                       method: .post,
-                       parameters: parameters,
-                       encoding: JSONEncoding.default,
-                       headers: /*headers*/
-                    ["content-type": "application/json", "accept": "*/*"]
+                   method: .post,
+                   parameters: parameters,
+                   encoding: JSONEncoding.default,
+                   headers: ["content-type": "application/json", "accept": "*/*"]
         )
-            .validate()
+        .validate()
         .responseDecodable(of: SigninData.self) { response in
+            let endTime = DispatchTime.now()
+            let nanoTime = endTime.uptimeNanoseconds - startTime.uptimeNanoseconds
+            let timeInterval = Double(nanoTime) / 1_000_000_000
+            print("Request took \(timeInterval) seconds")
+
             switch response.result {
             case .success(let value):
                 TokenManager.save(.grantType, value.type)
@@ -59,5 +65,6 @@ class SigninViewModel: ObservableObject {
                 print("/auth/signin", error.responseCode as Any, error.localizedDescription)
             }
         }
+
     }
 }

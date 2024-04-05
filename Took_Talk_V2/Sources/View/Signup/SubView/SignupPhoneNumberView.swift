@@ -26,6 +26,8 @@ struct SignupPhoneNumberView: View {
                           prompt: Text("전화번호를 입력해주세요")
                     .placeholderStyle()
                 )
+                .keyboardType(.numberPad)
+
                 Button {
                     withAnimation(.default) {
                         viewModel.certificationNumberField = true
@@ -36,7 +38,7 @@ struct SignupPhoneNumberView: View {
                         .font(.pretendard(15))
                 }
                 .buttonStyle(
-                    CustomStrokedButtonStyle(
+                    StrokedButtonStyle(
                         foregroundColor: .black,
                         borderColor: Color.myOrange,
                         radius: 10
@@ -67,7 +69,7 @@ struct SignupPhoneNumberView: View {
                                   prompt: Text("인증번호를 입력해주세요")
                             .placeholderStyle()
                         )
-                        
+                        .keyboardType(.numberPad)
                         HStack {
                             Spacer()
                             
@@ -101,7 +103,7 @@ struct SignupPhoneNumberView: View {
                         Text("인증 확인")
                             .font(.pretendard(15))
                     }
-                    .buttonStyle(CustomStrokedButtonStyle(
+                    .buttonStyle(StrokedButtonStyle(
                         foregroundColor: .black,
                         borderColor: Color("myOrange"),
                         radius: 10))

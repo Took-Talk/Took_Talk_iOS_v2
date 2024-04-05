@@ -17,10 +17,9 @@ struct ChatView: View {
                     
                     ScrollView(showsIndicators: false) {
                         VStack(spacing: 3) {
-                            Spacer()
-                            CustomAsyncImageView(
-                                imageURL: "https://wallpapers.com/images/high/intense-harimau-walking-on-grass-m7h2k7q1z815w5zk.webp",
-                                size: 140)
+//                            CustomAsyncImageView(
+//                                imageURL: "https://wallpapers.com/images/high/intense-harimau-walking-on-grass-m7h2k7q1z815w5zk.webp",
+//                                size: 140)
                             Text(viewModel.name)
                                 .font(.pretendard(20))
                             
@@ -34,19 +33,17 @@ struct ChatView: View {
                             Text("\(viewModel.name)님이 입장하였습니다\n매너 대화 지켜주세요!")
                                 .font(.pretendard(12))
                                 .foregroundStyle(Color(.systemGray2))
-                                .padding(.bottom, 20)
                                 .multilineTextAlignment(.center)
-                                .padding(.top, 20)
+                                .padding(.vertical, 20)
                             
                             ForEach(viewModel.mockData) { message in
                                 MessageView(viewModel: viewModel, message: message)
                                     .padding(.leading, 0)
-                                    .id(message.id) // Ensure each message has a unique ID
+                                    .id(message.id)
                                 
                             }
                         }
                         .onChange(of: viewModel.mockData.count) { _ in
-                                // Scroll to the bottom when viewModel.mockData count changes
                                 withAnimation {
                                     if !viewModel.mockData.isEmpty {
                                         let lastIndex = viewModel.mockData.count - 1
