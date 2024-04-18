@@ -20,6 +20,7 @@ class SigninViewModel: ObservableObject {
     func signup() {
         isSignupViewActive = true
     }
+    
     func login() {
         let parameters: [String: Any] = [
             "number": number,
