@@ -10,6 +10,7 @@ import Alamofire
 
 class ProfileViewModel: ObservableObject {
     @Published var isPressed: Bool = false
+    @Published var isEditProfileView: Bool = false
     @Published var number = "3"
     @Published var nickname: String = "알파 메일 최시훈"
     @Published var gender: String = "남"
@@ -18,6 +19,9 @@ class ProfileViewModel: ObservableObject {
     @Published var interests = ["알파", "메일", "최시훈"]
     @Published var bio: String = "자기소개"
     
+    func navigateToEditProfileView() {
+        isEditProfileView = true
+    }
     func getUserInfo() {
         AF.request("\(api)auth/userinfo",
                    method: .get,
