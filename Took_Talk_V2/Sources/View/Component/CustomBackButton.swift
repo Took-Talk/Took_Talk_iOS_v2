@@ -14,6 +14,7 @@ struct CustomBackButton: View {
         Button(action: action) {
             Image(systemName: "chevron.backward")
                 .foregroundColor(.gray)
+                .font(.title3)
         }
     }
 }

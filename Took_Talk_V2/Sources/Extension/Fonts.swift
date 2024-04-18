@@ -8,7 +8,6 @@
 import SwiftUI
 
 extension Font {
-    
     static func pretendard(
         _ size: CGFloat = 16,
         weight: PretendardWeight = .regular
@@ -22,8 +21,6 @@ extension Font {
         weight: PretendardWeight = .regular
     ) -> UIFont {
         let fontName = "Pretendard-\(weight.rawValue)"
-        
-        // Attempt to load the font directly using the font's file name
         if let fontURL = Bundle.main.url(forResource: fontName, withExtension: "otf"),
            let fontData = try? Data(contentsOf: fontURL),
            let provider = CGDataProvider(data: fontData as CFData),
@@ -45,25 +42,15 @@ extension Font {
         } else {
             print("Failed to load font data")
         }
-        
         fatalError("Failed to load font named \(fontName)")
     }
 }
 
 enum PretendardWeight: String {
-    
     case thin = "Thin"
     case light = "Light"
     case medium = "Medium"
     case regular = "Regular"
     case semibold = "SemiBold"
     case bold = "Bold"
-}
-
-struct SampleView: View {
-    
-    var body: some View {
-        Text("Hello, world")
-            .font(.pretendard(10))
-    }
 }

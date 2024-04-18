@@ -30,10 +30,12 @@ struct PageView: View {
     //    let bioCheckPublisher =  NotificationCenter.default.publisher(for: .bioCheck)
     let bioPublisher = NotificationCenter.default.publisher(for: .bioDidChange)
     
+    let imagePublisher = NotificationCenter.default.publisher(for: .imageDidChange)
+    
     var body: some View {
         VStack {
-            ProgressView(value: Float(viewModel.progress), total: 6) {
-                Text("\(viewModel.progress)/6")
+            ProgressView(value: Float(viewModel.progress), total: 7) {
+                Text("\(viewModel.progress)/7")
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .trailing)
                     .padding(.trailing, 10)
             }
@@ -106,6 +108,8 @@ struct PageView: View {
         .onReceive(bioPublisher) { notification in
             viewModel.bio = notification.object as? String ?? ""
         }
-        
+        .onReceive(imagePublisher) { notification in
+            viewModel.image = notification.object as? UIImage ?? UIImage()
+        }
     }
 }

@@ -18,8 +18,7 @@ struct SignupInterestView: View {
                     .font(.pretendard())
                 Spacer()
             }
-            .padding(.top, 0)
-            .padding(.bottom, 0)
+            .padding(.vertical, 0)
             .padding(.leading, 20)
             
             VStack(alignment: .leading) {
@@ -41,15 +40,20 @@ struct SignupInterestView: View {
                         .frame(height: 40)
                         .padding(.horizontal, 3)
                         .foregroundColor(
-                            viewModel.interests.contains(idx) ?
-                            Color.myOrange: viewModel.interests.contains(idx) ?
-                            Color(.systemGray2): Color(.systemGray4)
+                            viewModel.interests.contains(idx)
+                            ? Color("myOrange")
+                            : viewModel.interests.contains(idx)
+                            ? Color(.systemGray2)
+                            : Color(.systemGray4)
                         )
                         .overlay(
                             RoundedRectangle(cornerRadius: 20)
                                 .stroke(
-                                    viewModel.interests.contains(idx) ?
-                                    Color(.systemGray2): Color(.systemGray3),
+                                    viewModel.interests.contains(idx)
+                                    ? Color("myOrange")
+                                    : viewModel.interests.contains(idx)
+                                    ? Color(.systemGray2)
+                                    : Color(.systemGray3),
                                     lineWidth: 1
                                 )
                         )

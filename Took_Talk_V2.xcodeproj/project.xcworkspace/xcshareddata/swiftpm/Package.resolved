@@ -1,5 +1,5 @@
 {
-  "originHash" : "f9f2f161fa24525d92e87aadb0fe89a5530005e6ef728aa21336bbcc77031ad4",
+  "originHash" : "05b472a3f75eae3172ea5d1937c9e89c3233f1d15f4a6d38fdac1f19a085a9cc",
   "pins" : [
     {
       "identity" : "abseil-cpp-binary",
@@ -110,6 +110,15 @@
       }
     },
     {
+      "identity" : "opentds",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Mercen-Lee/OpenTDS.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "d01eb94fc0e787241ed5bb0f1cec32ce0c449af3"
+      }
+    },
+    {
       "identity" : "promises",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/google/promises.git",
@@ -125,6 +134,15 @@
       "state" : {
         "revision" : "9f0c76544701845ad98716f3f6a774a892152bcb",
         "version" : "1.26.0"
+      }
+    },
+    {
+      "identity" : "swiftui-customtabview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/NicFontana/SwiftUI-CustomTabView.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "6ef1961612710f594eeaf669bf09484ccfebecce"
       }
     },
     {
