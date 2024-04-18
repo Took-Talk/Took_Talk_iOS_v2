@@ -19,10 +19,11 @@ class PageViewModel: ObservableObject {
     @Published var mbti: String = "ESTP"
     @Published var interests = ["🪺 알파", "📨 메일", "🏸 최시훈"]
     @Published var bio: String = "majasinitna"
+    @Published var image: UIImage = UIImage()
     @Published var progress: Int = 1 {
         didSet {
-            if progress > 6 {
-                progress = 6
+            if progress > 7 {
+                progress = 7
             }
         }
     }
@@ -75,18 +76,24 @@ class PageViewModel: ObservableObject {
             //            } else {
             self.progress = newProgress
             //            }
+            
+        case 7:
+            self.progress = newProgress
         default:
             //            if bio.isEmpty {
             //                print("자기소개가 비어있습니다")
             //            } else {
-            let parameters: [String: Any] = ["number": number,
-                                             "password": password,
-                                             "nickname": nickname,
-                                             "gender": gender,
-                                             "age": age,
-                                             "mbti": mbti,
-                                             "interests": interests,
-                                             "bio": bio]
+            let parameters: [String: Any] = [
+                "number": number,
+                "password": password,
+                "nickname": nickname,
+                "gender": gender,
+                "age": age,
+                "mbti": mbti,
+                "interests": interests,
+                "bio": bio,
+                "image": image
+            ]
             print(parameters)
             let headers: HTTPHeaders = [
                 "cache-control": "no-cache,no-store,max-age=0,must-revalidate",
@@ -102,11 +109,13 @@ class PageViewModel: ObservableObject {
                 "x-frame-options": "DENY",
                 "x-xss-protection": "0"
             ]
-            AF.request("\(api)auth/signup",
+            AF.request(
+                "\(api)auth/signup",
                        method: .post,
                        parameters: parameters,
                        encoding: JSONEncoding.default,
-                       headers: headers)
+                       headers: headers
+            )
             .validate()
             .responseDecodable(of: SignupData.self) { response in
                 switch response.result {
