@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-Took_Talk_V2/Pods-Took_Talk_V2-frameworks.sh
+${BUILT_PRODUCTS_DIR}/SocketRocket/SocketRocket.framework
+${BUILT_PRODUCTS_DIR}/StompClientLib/StompClientLib.framework
