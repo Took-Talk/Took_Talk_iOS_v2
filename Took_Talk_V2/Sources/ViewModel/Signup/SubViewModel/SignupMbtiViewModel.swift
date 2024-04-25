@@ -8,12 +8,8 @@
 import SwiftUI
 
 class SignupMbtiViewModel: ObservableObject {
-    @Published var mbti: String = "ISTJ" {
-        didSet {
-            NotificationCenter.default.post(name: .mbtiDidChange, object: mbti)
-        }
-    }
-        func number() {
+    @Published var mbti: String = "ISTJ"
+    func number() {
         print("asdf")
     }
 }
