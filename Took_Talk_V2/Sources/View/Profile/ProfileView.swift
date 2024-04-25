@@ -38,7 +38,9 @@ struct ProfileView: View {
                             .frame(width: 80, height: 28)
                             .background(Color.myOrange)
                             .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
-                            
+                            .navigationDestination(isPresented: $viewModel.isEditProfileView) {
+                                
+                            }
                         }
                         Spacer()
                     }
@@ -72,14 +74,10 @@ struct ProfileView: View {
                                 Spacer()
                             }
                             
-                            if viewModel.isPressed {
-                                MultiLineHStack(items: viewModel.interests, maxWidth: 200)
-                                    .frame(maxWidth: .infinity, alignment: .top)
-
-                            } else {
-                                SingleLineHStack(items: viewModel.interests, maxWidth: 200)
-                                    .frame(maxWidth: .infinity, alignment: .top)
-                            }
+                            CustomInterestWrappingHStackView(
+                                isPressed: viewModel.isPressed,
+                                item: viewModel.interests
+                            )
                             
                             Spacer()
 
@@ -92,14 +90,24 @@ struct ProfileView: View {
                                         .frame(width: 15, height: 15)
                                         .foregroundStyle(.black)
                                 }
-                                .rotationEffect(Angle(degrees: viewModel.isPressed ? 90 : 0))
-                                .animation(.easeInOut(duration: 0.1), value: viewModel.isPressed)
+                                .rotationEffect(
+                                    Angle(
+                                        degrees: viewModel.isPressed ? 90 : 0
+                                    )
+                                )
+                                .animation(
+                                    .easeInOut(duration: 0.1),
+                                    value: viewModel.isPressed
+                                )
                                 .padding(.trailing, 15)
-//                                .frame()
+
                                 Spacer()
                             }
                         }
-                        .animation(.easeInOut(duration: 0.1), value: viewModel.isPressed)
+                        .animation(
+                            .easeInOut(duration: 0.1),
+                            value: viewModel.isPressed
+                        )
                         .frame(maxWidth: .infinity, alignment: .leading)
                         
                         ProfileInformationView(
