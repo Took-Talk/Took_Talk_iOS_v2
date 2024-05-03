@@ -8,18 +8,18 @@
 import SwiftUI
 
 struct ChatView: View {
-    @StateObject var viewModel = ChatViewModel()
-
+    @StateObject var viewModel = ChatViewModel(waitingViewModel: WaitingViewModel())
+    
     var body: some View {
         NavigationStack {
             VStack {
                 ScrollViewReader { proxy in
-                    
                     ScrollView(showsIndicators: false) {
-                        VStack(spacing: 3) {
-//                            CustomAsyncImageView(
-//                                imageURL: "https://wallpapers.com/images/high/intense-harimau-walking-on-grass-m7h2k7q1z815w5zk.webp",
-//                                size: 140)
+                        LazyVStack(spacing: 3) {
+                            //                            CustomAsyncImageView(
+                            //                                imageURL: "https://wallpapers.com/images/high/int
+                            //                            ense-harimau-walking-on-grass-m7h2k7q1z815w5zk.webp",
+                            //                                size: 140)
                             Text(viewModel.name)
                                 .font(.pretendard(20))
                             
@@ -36,32 +36,31 @@ struct ChatView: View {
                                 .multilineTextAlignment(.center)
                                 .padding(.vertical, 20)
                             
-                            ForEach(viewModel.mockData) { message in
+                            ForEach(viewModel.messageDatas) { message in
                                 MessageView(viewModel: viewModel, message: message)
                                     .padding(.leading, 0)
                                     .id(message.id)
-                                
                             }
                         }
-                        .onChange(of: viewModel.mockData.count) { _ in
-                                withAnimation {
-                                    if !viewModel.mockData.isEmpty {
-                                        let lastIndex = viewModel.mockData.count - 1
-                                        let lastMessageId = viewModel.mockData[lastIndex].id
-                                        DispatchQueue.main.async {
-                                            proxy.scrollTo(lastMessageId, anchor: .bottom)
-                                        }
+                        .onChange(of: viewModel.messageDatas.count) { _ in
+                            withAnimation {
+                                if !viewModel.messageDatas.isEmpty {
+                                    let lastIndex = viewModel.messageDatas.count - 1
+                                    let lastMessageId = viewModel.messageDatas[lastIndex].id
+                                    DispatchQueue.main.async {
+                                        proxy.scrollTo(lastMessageId, anchor: .bottom)
                                     }
                                 }
                             }
-                        
+                        }
                     }
                     .padding(.bottom, 5)
                 }
+                
                 ZStack {
                     HStack {
                         Button {
-                            viewModel.photoButton()
+                            //                            viewModel.photoButton()
                         } label: {
                             Image(systemName: "camera")
                                 .foregroundColor(.black)
@@ -81,19 +80,17 @@ struct ChatView: View {
                     .padding(.trailing, 12)
                     
                     HStack {
-                        TextField("Aa", text: $viewModel.text, axis: .vertical)
+                        TextField("Aa", text: $viewModel.textMessage, axis: .vertical)
                             .padding(.leading, 70)
                         
                         Button {
                             viewModel.sendMessage()
                         } label: {
-                            
                             Image(systemName: "paperplane.fill")
                                 .foregroundStyle(.myOrange)
                                 .frame(width: 28, height: 28)
                                 .clipShape(RoundedRectangle(cornerRadius: 14))
                                 .font(.title2)
-                            
                         }
                         .padding(.trailing, 26)
                     }
@@ -102,7 +99,7 @@ struct ChatView: View {
             }
             .navigationBarBackButtonHidden(true)
             .navigationBarItems(leading:
-                    Text("알파메일최시훈")
+                                    Text("알파메일최시훈")
             )
             .navigationBarItems(leading:
                                     Button {
@@ -128,6 +125,9 @@ struct ChatView: View {
                         .font(.system(size: 20))
                 }
             })
+            .onAppear {
+                //                viewModel.connect()
+            }
             
         }
         
