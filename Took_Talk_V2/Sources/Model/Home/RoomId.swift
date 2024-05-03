@@ -7,6 +7,8 @@
 
 import Foundation
 
-struct RoomId: Codable {
+struct RoomInfo: Codable {
     let roomId: Int
+    let userInfo: UserInfo
+    let matching: Bool
 }
