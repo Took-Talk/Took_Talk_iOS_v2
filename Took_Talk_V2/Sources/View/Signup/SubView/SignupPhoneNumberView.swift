@@ -21,13 +21,14 @@ struct SignupPhoneNumberView: View {
             .padding(.bottom, 0)
             
             HStack {
-                TextField("",
-                          text: $viewModel.phoneNumber,
-                          prompt: Text("전화번호를 입력해주세요")
-                    .placeholderStyle()
+                TextField(
+                    "",
+                    text: $viewModel.phoneNumber,
+                    prompt: Text("전화번호를 입력해주세요")
+                        .placeholderStyle()
                 )
                 .keyboardType(.numberPad)
-
+                
                 Button {
                     withAnimation(.default) {
                         viewModel.certificationNumberField = true
@@ -64,10 +65,11 @@ struct SignupPhoneNumberView: View {
                 
                 HStack {
                     ZStack {
-                        TextField("",
-                                  text: $viewModel.certificationNumber,
-                                  prompt: Text("인증번호를 입력해주세요")
-                            .placeholderStyle()
+                        TextField(
+                            "",
+                            text: $viewModel.certificationNumber,
+                            prompt: Text("인증번호를 입력해주세요")
+                                .placeholderStyle()
                         )
                         .keyboardType(.numberPad)
                         HStack {
@@ -103,10 +105,12 @@ struct SignupPhoneNumberView: View {
                         Text("인증 확인")
                             .font(.pretendard(15))
                     }
-                    .buttonStyle(StrokedButtonStyle(
-                        foregroundColor: .black,
-                        borderColor: Color("myOrange"),
-                        radius: 10))
+                    .buttonStyle(
+                        StrokedButtonStyle(
+                            foregroundColor: .black,
+                            borderColor: Color("myOrange"),
+                            radius: 10)
+                    )
                 }
                 .padding(.top, 0)
                 .frame(width: 290, height: 28)
