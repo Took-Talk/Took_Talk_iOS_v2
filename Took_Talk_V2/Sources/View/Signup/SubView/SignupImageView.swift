@@ -24,7 +24,8 @@ struct SignupImageView: View {
             .background(.gray)
             .clipShape(Circle())
             .overlay(
-                Circle().stroke()
+                Circle()
+                    .stroke()
             )
         
         Button {
