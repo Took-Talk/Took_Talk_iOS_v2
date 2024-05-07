@@ -12,6 +12,7 @@ struct ContentView: View {
     
     var body: some View {
                 Text("Press to Expand:")
+            .font(.custom("Pretendard-Bold", size: 20))
                 
     }
 }
