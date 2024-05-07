@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1DCDE92DE36B6A88260C75C4 /* Pods_Took_Talk_V2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C25899150EADD4BB756167AE /* Pods_Took_Talk_V2.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		851D25D52BB3BAF5003A9EC3 /* ProfileInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851D25D42BB3BAF5003A9EC3 /* ProfileInformationView.swift */; };
-		851D25D82BB3CC34003A9EC3 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851D25D72BB3CC34003A9EC3 /* ProfileModel.swift */; };
+		851D25D82BB3CC34003A9EC3 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851D25D72BB3CC34003A9EC3 /* UserInfo.swift */; };
 		852C0BE42BAF3B9200A7112D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 852C0BE32BAF3B9200A7112D /* Alamofire */; };
 		852C0BEA2BAF3BB500A7112D /* WrappingHStack in Frameworks */ = {isa = PBXBuildFile; productRef = 852C0BE92BAF3BB500A7112D /* WrappingHStack */; };
 		854E83DE2BCEC2E40023BF33 /* SignupImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854E83DD2BCEC2E40023BF33 /* SignupImageView.swift */; };
@@ -25,11 +26,12 @@
 		855509392BB641FD00AD82BE /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 855509382BB641FD00AD82BE /* FirebaseFirestoreSwift */; };
 		8555093B2BB641FD00AD82BE /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 8555093A2BB641FD00AD82BE /* FirebaseStorage */; };
 		8555093E2BB653AD00AD82BE /* FirebaseidToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8555093D2BB653AD00AD82BE /* FirebaseidToken.swift */; };
-		855509402BB824BD00AD82BE /* Notification.Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8555093F2BB824BD00AD82BE /* Notification.Name.swift */; };
 		855509422BB8425E00AD82BE /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855509412BB8425E00AD82BE /* Text.swift */; };
 		855509442BB85F9400AD82BE /* api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855509432BB85F9400AD82BE /* api.swift */; };
-		85556F7C2BB8655F00100F0A /* NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85556F7B2BB8655F00100F0A /* NotificationCenter.swift */; };
+		8555F06B2BD104060036AFB9 /* SwiftUIGIF in Frameworks */ = {isa = PBXBuildFile; productRef = 8555F06A2BD104060036AFB9 /* SwiftUIGIF */; };
 		8579B2132BBBF58800495C41 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8579B2122BBBF58800495C41 /* RoundedCorner.swift */; };
+		85A64D192BDCCE770095C46C /* UserInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A64D182BDCCE770095C46C /* UserInformation.swift */; };
+		85A64D1B2BDD51830095C46C /* ImageUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A64D1A2BDD51830095C46C /* ImageUrl.swift */; };
 		85ADC2452BC8049F008E947E /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ADC2442BC8049F008E947E /* EditProfileView.swift */; };
 		85ADC2472BC80F17008E947E /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ADC2462BC80F17008E947E /* EditProfileViewModel.swift */; };
 		85ADC2492BC8B3E8008E947E /* CustomInterestWrappingHStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ADC2482BC8B3E8008E947E /* CustomInterestWrappingHStackView.swift */; };
@@ -65,7 +67,6 @@
 		85B19BA32BAC8BE3007D9113 /* SignupPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B19AFC2BAC8BE3007D9113 /* SignupPasswordView.swift */; };
 		85B19BA42BAC8BE3007D9113 /* SignupPhoneNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B19AFD2BAC8BE3007D9113 /* SignupPhoneNumberView.swift */; };
 		85B19BA52BAC8BE3007D9113 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B19AFF2BAC8BE3007D9113 /* SignupView.swift */; };
-		85B19BA62BAC8BE3007D9113 /* Fish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B19B012BAC8BE3007D9113 /* Fish.swift */; };
 		85B19BA72BAC8BE3007D9113 /* WaitingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B19B022BAC8BE3007D9113 /* WaitingView.swift */; };
 		85B19BA82BAC8BE3007D9113 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B19B052BAC8BE3007D9113 /* ChatViewModel.swift */; };
 		85B19BA92BAC8BE3007D9113 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B19B072BAC8BE3007D9113 /* HomeViewModel.swift */; };
@@ -89,19 +90,18 @@
 		85B9CCC82BBB30A9008CD2D1 /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B9CCC72BBB30A9008CD2D1 /* AsyncImage.swift */; };
 		85B9CCCC2BBBE48C008CD2D1 /* ChatInputBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B9CCCB2BBBE48C008CD2D1 /* ChatInputBar.swift */; };
 		85C2EE9D2BBA4FDA000EFC9E /* HomeExplanationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C2EE9C2BBA4FDA000EFC9E /* HomeExplanationView.swift */; };
-		85C2EEA02BBA60AD000EFC9E /* SwiftUIGIF in Frameworks */ = {isa = PBXBuildFile; productRef = 85C2EE9F2BBA60AD000EFC9E /* SwiftUIGIF */; };
 		85D1780C2BB490FD001F8162 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D1780B2BB490FD001F8162 /* ProfileViewModel.swift */; };
 		85D178102BB59D9D001F8162 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D1780F2BB59D9D001F8162 /* ButtonStyle.swift */; };
+		85DBABC72BD1F26C004888E0 /* UserChatingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DBABC62BD1F26C004888E0 /* UserChatingProtocol.swift */; };
 		85E8D3642BB8945500E38D8B /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E8D3632BB8945500E38D8B /* Message.swift */; };
-		85F682C92BBD9B4E00E8FA8B /* CustomTabView in Frameworks */ = {isa = PBXBuildFile; productRef = 85F682C82BBD9B4E00E8FA8B /* CustomTabView */; };
-		85F682CC2BBD9BD000E8FA8B /* OpenTDS in Frameworks */ = {isa = PBXBuildFile; productRef = 85F682CB2BBD9BD000E8FA8B /* OpenTDS */; };
 		85F682CF2BBE40EA00E8FA8B /* CustomWrappingHStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F682CE2BBE40EA00E8FA8B /* CustomWrappingHStack.swift */; };
 		85F682D12BBE44A400E8FA8B /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F682D02BBE44A400E8FA8B /* List.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		152FBD521C651028191DE44D /* Pods-Took_Talk_V2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Took_Talk_V2.debug.xcconfig"; path = "Target Support Files/Pods-Took_Talk_V2/Pods-Took_Talk_V2.debug.xcconfig"; sourceTree = "<group>"; };
 		851D25D42BB3BAF5003A9EC3 /* ProfileInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInformationView.swift; sourceTree = "<group>"; };
-		851D25D72BB3CC34003A9EC3 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		851D25D72BB3CC34003A9EC3 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		854E83DD2BCEC2E40023BF33 /* SignupImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupImageView.swift; sourceTree = "<group>"; };
 		854E83DF2BCEC2FD0023BF33 /* SignupImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupImageViewModel.swift; sourceTree = "<group>"; };
 		854E83E32BCEC3CE0023BF33 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
@@ -112,11 +112,11 @@
 		855509302BB6416300AD82BE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8555093C2BB651DD00AD82BE /* Took-Talk-V2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Took-Talk-V2-Info.plist"; sourceTree = SOURCE_ROOT; };
 		8555093D2BB653AD00AD82BE /* FirebaseidToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseidToken.swift; sourceTree = "<group>"; };
-		8555093F2BB824BD00AD82BE /* Notification.Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.Name.swift; sourceTree = "<group>"; };
 		855509412BB8425E00AD82BE /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 		855509432BB85F9400AD82BE /* api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api.swift; sourceTree = "<group>"; };
-		85556F7B2BB8655F00100F0A /* NotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenter.swift; sourceTree = "<group>"; };
 		8579B2122BBBF58800495C41 /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
+		85A64D182BDCCE770095C46C /* UserInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformation.swift; sourceTree = "<group>"; };
+		85A64D1A2BDD51830095C46C /* ImageUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUrl.swift; sourceTree = "<group>"; };
 		85ADC2442BC8049F008E947E /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		85ADC2462BC80F17008E947E /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
 		85ADC2482BC8B3E8008E947E /* CustomInterestWrappingHStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInterestWrappingHStackView.swift; sourceTree = "<group>"; };
@@ -152,7 +152,6 @@
 		85B19AFC2BAC8BE3007D9113 /* SignupPasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupPasswordView.swift; sourceTree = "<group>"; };
 		85B19AFD2BAC8BE3007D9113 /* SignupPhoneNumberView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupPhoneNumberView.swift; sourceTree = "<group>"; };
 		85B19AFF2BAC8BE3007D9113 /* SignupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
-		85B19B012BAC8BE3007D9113 /* Fish.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fish.swift; sourceTree = "<group>"; };
 		85B19B022BAC8BE3007D9113 /* WaitingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitingView.swift; sourceTree = "<group>"; };
 		85B19B052BAC8BE3007D9113 /* ChatViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		85B19B072BAC8BE3007D9113 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -180,9 +179,12 @@
 		85C2EE9C2BBA4FDA000EFC9E /* HomeExplanationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeExplanationView.swift; sourceTree = "<group>"; };
 		85D1780B2BB490FD001F8162 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		85D1780F2BB59D9D001F8162 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
+		85DBABC62BD1F26C004888E0 /* UserChatingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserChatingProtocol.swift; sourceTree = "<group>"; };
 		85E8D3632BB8945500E38D8B /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		85F682CE2BBE40EA00E8FA8B /* CustomWrappingHStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomWrappingHStack.swift; sourceTree = "<group>"; };
 		85F682D02BBE44A400E8FA8B /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		C25899150EADD4BB756167AE /* Pods_Took_Talk_V2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Took_Talk_V2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCB35D042F31D2094CD8047E /* Pods-Took_Talk_V2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Took_Talk_V2.release.xcconfig"; path = "Target Support Files/Pods-Took_Talk_V2/Pods-Took_Talk_V2.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,34 +192,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85F682CC2BBD9BD000E8FA8B /* OpenTDS in Frameworks */,
 				855509392BB641FD00AD82BE /* FirebaseFirestoreSwift in Frameworks */,
 				852C0BEA2BAF3BB500A7112D /* WrappingHStack in Frameworks */,
-				85F682C92BBD9B4E00E8FA8B /* CustomTabView in Frameworks */,
 				855509372BB641FD00AD82BE /* FirebaseFirestore in Frameworks */,
+				8555F06B2BD104060036AFB9 /* SwiftUIGIF in Frameworks */,
 				855509352BB641FD00AD82BE /* FirebaseAuth in Frameworks */,
 				852C0BE42BAF3B9200A7112D /* Alamofire in Frameworks */,
 				8555093B2BB641FD00AD82BE /* FirebaseStorage in Frameworks */,
-				85C2EEA02BBA60AD000EFC9E /* SwiftUIGIF in Frameworks */,
+				1DCDE92DE36B6A88260C75C4 /* Pods_Took_Talk_V2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0810265DB283A65F7071FD53 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				152FBD521C651028191DE44D /* Pods-Took_Talk_V2.debug.xcconfig */,
+				DCB35D042F31D2094CD8047E /* Pods-Took_Talk_V2.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		851D25D62BB3CC2A003A9EC3 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				851D25D72BB3CC34003A9EC3 /* ProfileModel.swift */,
+				851D25D72BB3CC34003A9EC3 /* UserInfo.swift */,
 			);
 			path = Profile;
-			sourceTree = "<group>";
-		};
-		854E83E12BCEC3B70023BF33 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		854E83E22BCEC3C10023BF33 /* ImagePicker */ = {
@@ -236,11 +239,13 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		854E83EF2BCF42C40023BF33 /* Package */ = {
+		857177A22BDCCCF7002BA717 /* InternalDataBase */ = {
 			isa = PBXGroup;
 			children = (
+				85B19B0A2BAC8BE3007D9113 /* Token.swift */,
+				85A64D182BDCCE770095C46C /* UserInformation.swift */,
 			);
-			path = Package;
+			path = InternalDataBase;
 			sourceTree = "<group>";
 		};
 		8579B2112BBBF57A00495C41 /* Style */ = {
@@ -268,6 +273,7 @@
 				85B1995D2BAC7F9F007D9113 /* Took_Talk_V2 */,
 				85C05C782BB119000062E2FE /* Took_Talk_V2.app */,
 				85C05C812BB16B790062E2FE /* Frameworks */,
+				0810265DB283A65F7071FD53 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -284,7 +290,6 @@
 		85B19AD12BAC89D6007D9113 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				854E83EF2BCF42C40023BF33 /* Package */,
 				855509302BB6416300AD82BE /* GoogleService-Info.plist */,
 				85B199E62BAC8083007D9113 /* Assets.xcassets */,
 				85B199EB2BAC809C007D9113 /* TookTalkV2App.swift */,
@@ -308,6 +313,7 @@
 			isa = PBXGroup;
 			children = (
 				85B19AD42BAC8BE3007D9113 /* SignupData.swift */,
+				85A64D1A2BDD51830095C46C /* ImageUrl.swift */,
 			);
 			path = Signup;
 			sourceTree = "<group>";
@@ -318,7 +324,6 @@
 				854E83E52BCECBDA0023BF33 /* Home */,
 				85E8D3622BB8944E00E38D8B /* Message */,
 				851D25D62BB3CC2A003A9EC3 /* Profile */,
-				85B19AD32BAC8BE3007D9113 /* Signin */,
 				85B19AD52BAC8BE3007D9113 /* Signup */,
 			);
 			path = Model;
@@ -336,7 +341,6 @@
 		85B19AE12BAC8BE3007D9113 /* Component */ = {
 			isa = PBXGroup;
 			children = (
-				854E83E12BCEC3B70023BF33 /* New Group */,
 				85B19ADB2BAC8BE3007D9113 /* CustomBackButton.swift */,
 				85B19ADE2BAC8BE3007D9113 /* CustomSignTextField.swift */,
 				85B19ADD2BAC8BE3007D9113 /* CustomSignSecureField.swift */,
@@ -356,6 +360,7 @@
 		85B19AE62BAC8BE3007D9113 /* FriendList */ = {
 			isa = PBXGroup;
 			children = (
+				85B19AD32BAC8BE3007D9113 /* Signin */,
 				85B19AE42BAC8BE3007D9113 /* FriendListView.swift */,
 				85B19AE52BAC8BE3007D9113 /* FriendView.swift */,
 			);
@@ -451,7 +456,6 @@
 		85B19B032BAC8BE3007D9113 /* Waiting */ = {
 			isa = PBXGroup;
 			children = (
-				85B19B012BAC8BE3007D9113 /* Fish.swift */,
 				85B19B022BAC8BE3007D9113 /* WaitingView.swift */,
 			);
 			path = Waiting;
@@ -460,7 +464,6 @@
 		85B19B042BAC8BE3007D9113 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				85F682CD2BBE40C000E8FA8B /* Custom */,
 				8579B2112BBBF57A00495C41 /* Style */,
 				85B19AE12BAC8BE3007D9113 /* Component */,
 				85B19AF62BAC8BE3007D9113 /* Signin */,
@@ -495,7 +498,6 @@
 			isa = PBXGroup;
 			children = (
 				85B19B092BAC8BE3007D9113 /* SigninViewModel.swift */,
-				85B19B0A2BAC8BE3007D9113 /* Token.swift */,
 			);
 			path = Signin;
 			sourceTree = "<group>";
@@ -548,7 +550,9 @@
 		85B19B182BAC8BE3007D9113 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				857177A22BDCCCF7002BA717 /* InternalDataBase */,
 				85C05C6B2BB0F8270062E2FE /* Extension */,
+				85DBABC42BD1F248004888E0 /* Protocol */,
 				85B19B042BAC8BE3007D9113 /* View */,
 				85B19AD62BAC8BE3007D9113 /* Model */,
 				85B19B172BAC8BE3007D9113 /* ViewModel */,
@@ -583,8 +587,6 @@
 				855509412BB8425E00AD82BE /* Text.swift */,
 				85B19BBF2BAC8CFB007D9113 /* Fonts.swift */,
 				85D1780F2BB59D9D001F8162 /* ButtonStyle.swift */,
-				8555093F2BB824BD00AD82BE /* Notification.Name.swift */,
-				85556F7B2BB8655F00100F0A /* NotificationCenter.swift */,
 				85F682D02BBE44A400E8FA8B /* List.swift */,
 				85543B6C2BBEC34C00941045 /* String.swift */,
 			);
@@ -594,6 +596,7 @@
 		85C05C812BB16B790062E2FE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C25899150EADD4BB756167AE /* Pods_Took_Talk_V2.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -607,19 +610,28 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		85DBABC42BD1F248004888E0 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				85DBABC52BD1F25C004888E0 /* Home */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		85DBABC52BD1F25C004888E0 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				85DBABC62BD1F26C004888E0 /* UserChatingProtocol.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		85E8D3622BB8944E00E38D8B /* Message */ = {
 			isa = PBXGroup;
 			children = (
 				85E8D3632BB8945500E38D8B /* Message.swift */,
 			);
 			path = Message;
-			sourceTree = "<group>";
-		};
-		85F682CD2BBE40C000E8FA8B /* Custom */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Custom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -629,10 +641,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 85B199692BAC7FA0007D9113 /* Build configuration list for PBXNativeTarget "Took_Talk_V2" */;
 			buildPhases = (
+				6400D678EFC539BA3F961793 /* [CP] Check Pods Manifest.lock */,
 				85C05C6F2BB116190062E2FE /* SwiftLint Script */,
 				85B199572BAC7F9F007D9113 /* Sources */,
 				85B199582BAC7F9F007D9113 /* Frameworks */,
 				85B199592BAC7F9F007D9113 /* Resources */,
+				516F3CCBF7C1B3950AFED03F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -646,9 +660,7 @@
 				855509362BB641FD00AD82BE /* FirebaseFirestore */,
 				855509382BB641FD00AD82BE /* FirebaseFirestoreSwift */,
 				8555093A2BB641FD00AD82BE /* FirebaseStorage */,
-				85C2EE9F2BBA60AD000EFC9E /* SwiftUIGIF */,
-				85F682C82BBD9B4E00E8FA8B /* CustomTabView */,
-				85F682CB2BBD9BD000E8FA8B /* OpenTDS */,
+				8555F06A2BD104060036AFB9 /* SwiftUIGIF */,
 			);
 			productName = Took_Talk_V2;
 			productReference = 85C05C782BB119000062E2FE /* Took_Talk_V2.app */;
@@ -683,8 +695,6 @@
 				852C0BE82BAF3BB500A7112D /* XCRemoteSwiftPackageReference "WrappingHStack" */,
 				8555092F2BB6407A00AD82BE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				85C2EE9E2BBA60AD000EFC9E /* XCRemoteSwiftPackageReference "swiftui-gif" */,
-				85F682C72BBD9B4E00E8FA8B /* XCRemoteSwiftPackageReference "SwiftUI-CustomTabView" */,
-				85F682CA2BBD9BD000E8FA8B /* XCRemoteSwiftPackageReference "OpenTDS" */,
 			);
 			productRefGroup = 85B199522BAC7F9F007D9113;
 			projectDirPath = "";
@@ -715,6 +725,45 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		516F3CCBF7C1B3950AFED03F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Took_Talk_V2/Pods-Took_Talk_V2-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Took_Talk_V2/Pods-Took_Talk_V2-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Took_Talk_V2/Pods-Took_Talk_V2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6400D678EFC539BA3F961793 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Took_Talk_V2-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		85C05C6F2BB116190062E2FE /* SwiftLint Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
@@ -743,11 +792,11 @@
 			files = (
 				854E85BC2BCFEB290023BF33 /* .swiftlint.yml in Sources */,
 				85B19B9B2BAC8BE3007D9113 /* MainTabView.swift in Sources */,
-				85556F7C2BB8655F00100F0A /* NotificationCenter.swift in Sources */,
 				85B19BA12BAC8BE3007D9113 /* SignupMbtiView.swift in Sources */,
 				85C2EE9D2BBA4FDA000EFC9E /* HomeExplanationView.swift in Sources */,
 				85B19B962BAC8BE3007D9113 /* AgePickerView.swift in Sources */,
 				85B19BAA2BAC8BE3007D9113 /* SigninViewModel.swift in Sources */,
+				85A64D1B2BDD51830095C46C /* ImageUrl.swift in Sources */,
 				85B199EC2BAC809C007D9113 /* TookTalkV2App.swift in Sources */,
 				85B19B9A2BAC8BE3007D9113 /* HomeView.swift in Sources */,
 				85B19BA82BAC8BE3007D9113 /* ChatViewModel.swift in Sources */,
@@ -761,10 +810,11 @@
 				85E8D3642BB8945500E38D8B /* Message.swift in Sources */,
 				85B19BA22BAC8BE3007D9113 /* SignupNicNameView.swift in Sources */,
 				8579B2132BBBF58800495C41 /* RoundedCorner.swift in Sources */,
+				85DBABC72BD1F26C004888E0 /* UserChatingProtocol.swift in Sources */,
 				85B19BAD2BAC8BE3007D9113 /* SignupInterestViewModel.swift in Sources */,
 				85B19B9C2BAC8BE3007D9113 /* ProfileView.swift in Sources */,
 				85F682CF2BBE40EA00E8FA8B /* CustomWrappingHStack.swift in Sources */,
-				851D25D82BB3CC34003A9EC3 /* ProfileModel.swift in Sources */,
+				851D25D82BB3CC34003A9EC3 /* UserInfo.swift in Sources */,
 				85B9CCCC2BBBE48C008CD2D1 /* ChatInputBar.swift in Sources */,
 				854E83E42BCEC3CE0023BF33 /* ImagePickerView.swift in Sources */,
 				85B19BAE2BAC8BE3007D9113 /* SignupIntroduceViewModel.swift in Sources */,
@@ -774,8 +824,8 @@
 				85B19BC72BAC8CFB007D9113 /* Fonts.swift in Sources */,
 				85543B6D2BBEC34C00941045 /* String.swift in Sources */,
 				85B19BB32BAC8BE3007D9113 /* WaitingViewModel.swift in Sources */,
-				855509402BB824BD00AD82BE /* Notification.Name.swift in Sources */,
 				855509442BB85F9400AD82BE /* api.swift in Sources */,
+				85A64D192BDCCE770095C46C /* UserInformation.swift in Sources */,
 				85F682D12BBE44A400E8FA8B /* List.swift in Sources */,
 				85B19BB12BAC8BE3007D9113 /* SignupPasswordViewModel.swift in Sources */,
 				85B19B922BAC8BE3007D9113 /* StrokedButton.swift in Sources */,
@@ -797,7 +847,6 @@
 				85B19B9D2BAC8BE3007D9113 /* SigninView.swift in Sources */,
 				85D178102BB59D9D001F8162 /* ButtonStyle.swift in Sources */,
 				85B19BA02BAC8BE3007D9113 /* SignupIntroduceView.swift in Sources */,
-				85B19BA62BAC8BE3007D9113 /* Fish.swift in Sources */,
 				85B19B912BAC8BE3007D9113 /* CustomSignTextField.swift in Sources */,
 				85B19B8C2BAC8BE3007D9113 /* ChatView.swift in Sources */,
 				85B19B8A2BAC8BE3007D9113 /* SigninData.swift in Sources */,
@@ -940,6 +989,7 @@
 		};
 		85B1996A2BAC7FA0007D9113 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 152FBD521C651028191DE44D /* Pods-Took_Talk_V2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -973,6 +1023,7 @@
 		};
 		85B1996B2BAC7FA0007D9113 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCB35D042F31D2094CD8047E /* Pods-Took_Talk_V2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1060,22 +1111,6 @@
 				minimumVersion = 1.0.1;
 			};
 		};
-		85F682C72BBD9B4E00E8FA8B /* XCRemoteSwiftPackageReference "SwiftUI-CustomTabView" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/NicFontana/SwiftUI-CustomTabView.git";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-		85F682CA2BBD9BD000E8FA8B /* XCRemoteSwiftPackageReference "OpenTDS" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Mercen-Lee/OpenTDS.git";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1109,20 +1144,10 @@
 			package = 8555092F2BB6407A00AD82BE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
 		};
-		85C2EE9F2BBA60AD000EFC9E /* SwiftUIGIF */ = {
+		8555F06A2BD104060036AFB9 /* SwiftUIGIF */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 85C2EE9E2BBA60AD000EFC9E /* XCRemoteSwiftPackageReference "swiftui-gif" */;
 			productName = SwiftUIGIF;
-		};
-		85F682C82BBD9B4E00E8FA8B /* CustomTabView */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 85F682C72BBD9B4E00E8FA8B /* XCRemoteSwiftPackageReference "SwiftUI-CustomTabView" */;
-			productName = CustomTabView;
-		};
-		85F682CB2BBD9BD000E8FA8B /* OpenTDS */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 85F682CA2BBD9BD000E8FA8B /* XCRemoteSwiftPackageReference "OpenTDS" */;
-			productName = OpenTDS;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
