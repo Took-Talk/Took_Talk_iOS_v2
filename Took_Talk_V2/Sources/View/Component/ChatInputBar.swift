@@ -43,11 +43,14 @@ struct ChatInputBar: View {
                     Image(systemName: "paperplane.fill")
                         .foregroundStyle(.myOrange)
                         .frame(width: 28, height: 28)
-                        .clipShape(RoundedRectangle(cornerRadius: 14))
+                        .clipShape(
+                            RoundedRectangle(cornerRadius: 14)
+                        )
                         .font(.title2)
                     
                 }
                 .padding(.trailing, 26)
             }
-        }    }
+        }  
+    }
 }
