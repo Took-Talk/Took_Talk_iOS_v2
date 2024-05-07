@@ -7,12 +7,15 @@
 
 import Foundation
 
-struct Message: Decodable, Identifiable, Equatable {
+struct Message: Identifiable, Equatable {
     var id = UUID()
-    let userUid: String
     let text: String
-    let profileImageURL: String
-    let createdAt: Date
+//    let profileImageURL: String
+//    let createdAt: Date
+    
+    init(text: String) {
+        self.text = text
+    }
     
     func isFromCurrentUser() -> Bool {
         return true
