@@ -10,17 +10,17 @@ import Foundation
 struct UserInfo: Codable {
     let id: Int
     let number: String
-    let password: String
+    let password: String?
     let nickname: String
     let age: String
     let gender: String
     let mbti: String
     let interests: [String]
     let imgUrl: String?
-    let bio: String
+    let bio: String?
     let createdAt: String?
     let status: Int
-    let roles: [UserRole]
+    let roles: [UserRole]?
 }
 
 struct UserRole: Codable {
