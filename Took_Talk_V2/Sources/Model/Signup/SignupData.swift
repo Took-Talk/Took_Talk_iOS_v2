@@ -9,15 +9,13 @@ import Foundation
 import Alamofire
 
 struct SignupData: Codable {
-    let success: Bool
-    let message: String
-    let data: SignupDatas
-}
-struct SignupDatas: Codable {
-    let type: String
-    let token: String
-    let id: Int
-    let number: String
-    let password: String
-    let roles: [String]
+    var number: String
+    var password: String
+    var nickname: String
+    var gender: String
+    var age: String
+    var mbti: String
+    var interests: [String]
+    var bio: String
+    var imgUrl: String
 }
