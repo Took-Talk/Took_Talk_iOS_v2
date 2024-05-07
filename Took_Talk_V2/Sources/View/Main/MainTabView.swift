@@ -10,7 +10,7 @@ import SwiftUI
 struct MainTabView: View {
     var body: some View {
         NavigationStack {
-            TabView() {
+            TabView {
                 FriendView()
                     .tabItem {
                         Image(systemName: "person.3.fill")
