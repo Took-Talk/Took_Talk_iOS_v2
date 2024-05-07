@@ -20,7 +20,9 @@ struct ImagePickerView: UIViewControllerRepresentable {
         Coordinator(self)
     }
     
-    func makeUIViewController(context: UIViewControllerRepresentableContext<ImagePickerView>) -> UIImagePickerController {
+    func makeUIViewController(
+        context: UIViewControllerRepresentableContext<ImagePickerView>
+    ) -> UIImagePickerController {
         
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = context.coordinator
@@ -30,11 +32,13 @@ struct ImagePickerView: UIViewControllerRepresentable {
         return imagePicker
     }
     
-    func updateUIViewController(_ uiViewController: UIImagePickerController, context: UIViewControllerRepresentableContext<ImagePickerView>) {
+    func updateUIViewController(
+        _ uiViewController: UIImagePickerController,
+        context: UIViewControllerRepresentableContext<ImagePickerView>
+    ) {
         
     }
 }
-
 
 final class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     let parent: ImagePickerView
@@ -43,7 +47,10 @@ final class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigation
         self.parent = parent
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+    func imagePickerController(
+        _ picker: UIImagePickerController,
+        didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]
+    ) {
         if let selectedImage = info[.originalImage] as? UIImage {
             parent.selectedImage = selectedImage
         }
