@@ -10,8 +10,6 @@ import SwiftUI
 struct SigninView: View {
     @StateObject private var viewModel = SigninViewModel()
     
-    let signupSuccessPublish = NotificationCenter.default.publisher(for: .signupSuccess)
-    
     var body: some View {
         NavigationStack {
             VStack {
@@ -42,7 +40,7 @@ struct SigninView: View {
                         Spacer()
                         
                         Button {
-//                            viewModel.signup()
+                            viewModel.navigateToSignupView()
                         } label: {
                             Text("비밀번호 찾기")
                                 .font(.pretendard(13, weight: .thin))
@@ -55,7 +53,7 @@ struct SigninView: View {
                             .padding(.trailing, 3)
                         
                         Button {
-                            viewModel.signup()
+                            viewModel.navigateToSignupView()
                         } label: {
                             Text("회원가입")
                                 .font(.pretendard(13, weight: .thin))
@@ -93,11 +91,8 @@ struct SigninView: View {
                 Spacer()
             }
         }
-        .onReceive(signupSuccessPublish) { _ in
-            viewModel.isSignupViewActive = false
-        }
         .onAppear {
-            viewModel.login()
+//            viewModel.login()
         }
     }
 }
